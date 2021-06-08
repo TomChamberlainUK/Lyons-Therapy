@@ -1,10 +1,9 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 
-import Navigation from '../navigation/Navigation';
+import Navigation from 'components/navigation/Navigation';
+import logoUrl from 'images/logo-horizontal.svg';
 import * as styles from './header.module.scss';
-import logoUrl from '../../images/logo-horizontal.svg';
-
 
 function Header({ currentPage }) {
 

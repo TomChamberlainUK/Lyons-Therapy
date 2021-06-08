@@ -1,11 +1,10 @@
 import * as React from 'react';
 import "@fontsource/material-icons";
 
-import Header from '../header/Header';
-import Footer from '../footer/Footer';
-
-import './global.scss';
+import Header from 'components/header/Header';
+import Footer from 'components/footer/Footer';
 import * as styles from './layout.module.scss';
+import 'styles/global.scss';
 
 function Layout({ pageTitle, children }) {
   return (

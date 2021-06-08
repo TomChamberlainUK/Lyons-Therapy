@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Layout from '../components/layout/Layout';
-// import ParallaxContainer from '../components/parallaxContainer/ParallaxContainer';
+import Layout from 'components/layout/Layout';
+// import ParallaxContainer from 'components/parallaxContainer/ParallaxContainer';
 
 function AboutPage() {
   return (
