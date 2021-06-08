@@ -3,7 +3,7 @@ import Layout from '../components/layout/Layout';
 
 function IndexPage() {
   return (
-    <Layout pageTitle="Home">
+    <Layout pageTitle="Contact">
       <h1>Home</h1>
     </Layout>
   );

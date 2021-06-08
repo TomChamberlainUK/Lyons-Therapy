@@ -1,12 +1,12 @@
 import * as React from 'react';
 import Layout from '../components/layout/Layout';
 
-function IndexPage() {
+function ServicesPage() {
   return (
-    <Layout pageTitle="Home">
-      <h1>Home</h1>
+    <Layout pageTitle="Services">
+      <h1>Services</h1>
     </Layout>
   );
 }
 
-export default IndexPage;
+export default ServicesPage;
