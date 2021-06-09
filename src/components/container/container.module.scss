@@ -1,5 +1,9 @@
 .container {
   box-sizing: border-box;
-  padding: 3rem;
+  padding: 1rem;
   max-width: 40rem;
+
+  @media screen and (min-width: 400px) {
+    padding: 3rem;
+  }
 }
