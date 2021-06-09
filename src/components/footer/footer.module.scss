@@ -4,8 +4,8 @@
   justify-content: center;
 
   height: 15rem;
-  background-color: #3E706D;
+  background-color: var(--color-dark);
 
-  color: white;
+  color: var(--text-light-contrast);
   font-size: 2rem;
 }
