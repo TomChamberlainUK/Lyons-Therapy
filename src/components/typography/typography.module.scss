@@ -1,0 +1,59 @@
+.title {
+  color: var(--text-dark-contrast);
+  font-size: 2rem;
+  letter-spacing: 0.0625rem;
+}
+
+.subtitle {
+  color: var(--text-dark-high-emphasis);
+  letter-spacing: 0.03125rem;
+}
+
+.heading {
+  color: var(--text-dark-contrast);
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
+}
+
+.subheading {
+  color: var(--text-dark-high-emphasis);
+  letter-spacing: 0.03125rem;
+}
+
+.paragraph {
+  color: var(--text-dark-low-emphasis);
+  letter-spacing: 0.03125rem;
+  line-height: 150%;
+}
+
+.note {
+  color: var(--text-dark-low-emphasis);
+  line-height: 125%;
+}
+
+.seperator {
+  margin: {
+    top: 2rem;
+    bottom: 2rem;
+  }
+
+  &.is-bold {
+    border: none;
+    height: 0.25rem;
+    background-color: var(--color-primary);
+  }
+}
+
+.list {
+  padding-left: 1.5rem;
+  list-style-type: square;
+
+  &__item {
+    color: var(--text-dark-low-emphasis);
+    line-height: 175%;
+
+    &::marker {
+      color: var(--color-primary);
+    }
+  }
+}
