@@ -10,11 +10,21 @@
   --text-dark-high-emphasis: rgba(0,0,0,0.87);
   --text-dark-low-emphasis: rgba(0,0,0,0.65);
   --text-dark-disabled: rgba(0,0,0,0.38); // Does not conform to WCAG standards
+  --text-dark-warning: rgba(144,0,0,1);
+  --text-dark-accepted: rgba(0,87,0,1);
   // Text colours light (for use on dark background)
   --text-light-contrast: rgba(255,255,255,1);
   --text-light-high-emphasis: rgba(255,255,255,0.87);
   --text-light-low-emphasis: rgba(255,255,255,0.65); // Conforms to WCAG AA standards for text 18pt+ (14pt+ if bold)
-  --text-light-disabled: rgba(255,255,255,0.38); // Does not coform to WCAG standards
+  --text-light-disabled: rgba(255,255,255,0.38); // Does not conform to WCAG standards
+  --text-light-warning: rgba(255,97,97,1);
+  --text-light-accepted: rgba(0,179,0,1);
+
+  // Responsive sizing
+  --size-header-height: 3rem;
+  @media screen and (min-width: 800px) {
+    --size-header-height: 4.5rem;
+  }
 }
 
 html, body, #___gatsby, #gatsby-focus-wrapper {

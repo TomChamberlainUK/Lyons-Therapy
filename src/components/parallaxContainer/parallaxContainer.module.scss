@@ -17,7 +17,7 @@
   @media screen and (min-width: 400px) {
     padding-top: 0;
     width: 40%;
-    height: calc(100vh - 4.5rem); // full height - header height
+    height: calc(100vh - var(--size-header-height));
   }
 
   &__inner {

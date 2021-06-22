@@ -5,11 +5,7 @@
 
 .main {
   box-sizing: border-box;
-  padding-top: 3rem;
+  padding-top: var(--size-header-height);
   width: 100%;
   min-height: 100%;
-
-  @media screen and (min-width: 400px) {
-    padding-top: 4.5rem;
-  }
 }
