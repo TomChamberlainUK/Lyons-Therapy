@@ -11,7 +11,7 @@ ScrollTrigger.defaults({
   // markers: true
 });
 
-function ParallaxContainer({ images, children }) {
+function ParallaxContainer({ images = [], children }) {
 
   // Refs for gsap transitions
   const containerRef = useRef(null);
@@ -30,6 +30,9 @@ function ParallaxContainer({ images, children }) {
     const sections = sectionRefs.current;
 
     const startOffset = container.offsetTop;
+
+    if (!images.length) console.warn('No images provided for Parallax Container');
+    if (sections.length < images.length - 1) console.warn('Not enough section labels provided for Parallax Container to reveal all images');
 
     // Pin image frame
     gsap.to(imageFrame, {
