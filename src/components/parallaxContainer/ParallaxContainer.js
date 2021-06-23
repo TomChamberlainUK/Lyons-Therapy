@@ -82,6 +82,7 @@ function ParallaxContainer({ images = [], children }) {
               <div
                 key={i}
                 ref={ref => { imageRefs.current[i] = ref }}
+                className={styles.imageWrapper}
               >
                 {React.cloneElement(image, { className: styles.image })}
               </div>

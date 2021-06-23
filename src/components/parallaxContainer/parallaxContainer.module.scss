@@ -29,10 +29,14 @@
   }
 }
 
-.image {
+.image-wrapper {
   position: absolute;
   top: 0;
   right: 0;
+  height: 100%;
+}
+
+.image {
   height: 100%;
 }
 
