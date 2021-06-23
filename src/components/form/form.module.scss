@@ -1,0 +1,86 @@
+.input {
+  box-sizing: border-box;
+  background-clip: border-box;
+  border: 0.0625rem solid var(--text-dark-disabled);
+  border-radius: 0.25rem;
+  margin: 0.25rem 0;
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+  font-size: 1rem;
+
+  &:focus {
+    outline-color: var(--color-primary);
+  }
+
+  &::placeholder {
+    color: var(--text-dark-disabled);
+  }
+}
+
+.text-area {
+  @extend .input;
+  height: 5rem;
+  font-family: inherit;
+  resize: none;
+}
+
+.label {
+  display: block;
+  margin: 1rem 0;
+  color: var(--text-dark-high-emphasis);
+  font: {
+    size: 1rem;
+    weight: 700;
+  }
+  letter-spacing: 0.03125rem;
+}
+
+.note {
+  color: var(--text-dark-low-emphasis);
+  font: {
+    size: 0.75rem;
+    weight: 400;
+  }
+
+  &:before {
+    content: " — ";
+  }
+}
+
+.error-message {
+  display: inline-block;
+  width: 100%;
+  color: var(--text-dark-warning);
+  font: {
+    size: 0.75rem;
+    weight: 400;
+  }
+  letter-spacing: 0.03125rem;
+
+  &:before {
+    content: "\026A0  ";
+  }
+}
+
+.button {
+  display: block;
+  background-clip: border-box;
+  border: none;
+  border-bottom: 0.125rem solid var(--text-dark-disabled);
+  border-radius: 0.25rem;
+  margin: 1rem 0;
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+  background-color: var(--color-light);
+  color: var(--text-dark-high-emphasis);
+  font: {
+    size: 1rem;
+    weight: 700;
+  }
+  cursor: pointer;
+
+  &:active {
+    border-bottom: none;
+    border-top: 0.125rem solid var(--color-accent);
+  }
+}
