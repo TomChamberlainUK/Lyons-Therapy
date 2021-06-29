@@ -1,3 +1,5 @@
+@use 'styles/typography';
+
 .input {
   box-sizing: border-box;
   background-clip: border-box;
@@ -25,22 +27,14 @@
 }
 
 .label {
+  @include typography.subheading(var(--text-dark-high-emphasis));
   display: block;
   margin: 1rem 0;
-  color: var(--text-dark-high-emphasis);
-  font: {
-    size: 1rem;
-    weight: 700;
-  }
-  letter-spacing: 0.03125rem;
+  font-size: 1rem;
 }
 
 .note {
-  color: var(--text-dark-low-emphasis);
-  font: {
-    size: 0.75rem;
-    weight: 400;
-  }
+  @include typography.note(var(--text-dark-low-emphasis));
 
   &:before {
     content: " — ";
@@ -48,14 +42,9 @@
 }
 
 .error-message {
+  @include typography.note(var(--text-dark-warning));
   display: inline-block;
   width: 100%;
-  color: var(--text-dark-warning);
-  font: {
-    size: 0.75rem;
-    weight: 400;
-  }
-  letter-spacing: 0.03125rem;
 
   &:before {
     content: "\026A0  ";

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import * as styles from './typography.module.scss';
+import * as styles from './typographyLight.module.scss';
 
 export function Title({ children }) {
   return <h1 className={styles.title}>{children}</h1>
@@ -27,7 +27,7 @@ export function Note({ children }) {
 }
 
 export function Seperator({ isBold }) {
-  return <hr className={`${styles.seperator} ${isBold && styles.isBold}`}/>
+  return <hr className={`${styles.seperator} ${isBold && styles.seperatorIsBold}`}/>
 }
 
 export function List({ children }) {

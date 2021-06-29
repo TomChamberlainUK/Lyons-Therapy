@@ -1,0 +1,84 @@
+@mixin title($color: black) {
+  color: $color;
+  font: {
+    size: 2rem;
+    weight: 700;
+  }
+  letter-spacing: 0.0625rem;
+}
+
+@mixin subtitle($color: black) {
+  color: $color;
+  font: {
+    size: 1rem;
+    weight: 400;
+  }
+  letter-spacing: 0.03125rem;
+}
+
+@mixin heading($color: black) {
+  color: $color;
+  font: {
+    size: 1.5rem;
+    weight: 700;
+  }
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
+}
+
+@mixin subheading($color: black) {
+  color: $color;
+  font: {
+    size: 1.17rem;
+    weight: 700;
+  }
+  letter-spacing: 0.03125rem;
+}
+
+@mixin paragraph($color: black) {
+  color: $color;
+  font: {
+    size: 1rem;
+    weight: 400;
+  }
+  letter-spacing: 0.03125rem;
+  line-height: 150%;
+}
+
+@mixin note($color: black) {
+  color: $color;
+  font: {
+    size: 0.8rem;
+    weight: 400;
+  }
+  line-height: 125%;
+}
+
+@mixin list {
+  padding-left: 1.5rem;
+  list-style-type: square;
+}
+
+@mixin list-item($color: black, $marker-color: black) {
+  color: $color;
+  line-height: 175%;
+
+  &::marker {
+    color: $marker-color;
+  }
+}
+
+@mixin seperator($color: black) {
+  border: none;
+  margin: {
+    top: 2rem;
+    bottom: 2rem;
+  }
+  height: 0.0625rem;
+  background-color: $color;
+}
+
+@mixin seperator--bold($color: black) {
+  height: 0.25rem;
+  background-color: $color;
+}

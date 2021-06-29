@@ -4,7 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import Layout from 'components/layout/Layout';
 import ParallaxContainer from 'components/parallaxContainer/ParallaxContainer';
 import { Container } from 'components/container/Container';
-import { Title, Subtitle, Heading, Subheading, Paragraph, Note, Seperator, List } from 'components/typography/Typography';
+import { Title, Subtitle, Heading, Subheading, Paragraph, Note, Seperator, List } from 'components/typography/TypographyDark';
 
 function ServicesPage() {
   return (

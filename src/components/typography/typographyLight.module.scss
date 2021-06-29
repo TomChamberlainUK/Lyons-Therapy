@@ -1,0 +1,41 @@
+@use 'styles/typography';
+
+.title {
+  @include typography.title(var(--text-light-contrast));
+}
+
+.subtitle {
+  @include typography.subtitle(var(--text-light-high-emphasis));
+}
+
+.heading {
+  @include typography.heading(var(--text-light-contrast));
+}
+
+.subheading {
+  @include typography.subheading(var(--text-light-high-emphasis));
+}
+
+.paragraph {
+  @include typography.paragraph(var(--text-light-low-emphasis));
+}
+
+.note {
+  @include typography.note(var(--text-light-low-emphasis));
+}
+
+.list {
+  @include typography.list;
+
+  &__item {
+    @include typography.list-item(var(--text-light-low-emphasis), var(--text-light-contrast));
+  }
+}
+
+.seperator {
+  @include typography.seperator(var(--text-light-disabled));
+
+  &--is-bold {
+    @include typography.seperator--bold(var(--text-light-contrast));
+  }
+}
