@@ -4,7 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import Layout from 'components/layout/Layout';
 import ParallaxContainer from 'components/parallaxContainer/ParallaxContainer';
 import { Container } from 'components/container/Container';
-import { Title, Subtitle, Heading, Subheading, Paragraph, Note, Seperator, List } from 'components/typography/TypographyDark';
+import { Title, Subtitle, Heading, Subheading, Paragraph, Note, Seperator, List, ListItem } from 'components/typography/Typography';
 
 function AboutPage() {
 
@@ -40,10 +40,10 @@ function AboutPage() {
           <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel libero nisi. Sed euismod mattis gravida. In pulvinar, metus id tincidunt aliquam, mauris sapien consequat turpis, id malesuada sem lorem non ligula. Vestibulum dignissim metus nec justo dignissim, egestas suscipit orci tempus. Nunc a dolor urna. Fusce vel metus eget sapien feugiat consectetur sed molestie diam. Maecenas nisl metus, tempus commodo ullamcorper eget, porttitor sed metus. Nulla a arcu eu augue porta tincidunt nec ut felis.</Paragraph>
           <Subheading>Subheading</Subheading>
           <List>
-            <List.Item>This is a bullet-point</List.Item>
-            <List.Item>This is a bullet-point</List.Item>
-            <List.Item>This is a bullet-point</List.Item>
-            <List.Item>This is a bullet-point</List.Item>
+            <ListItem>This is a bullet-point</ListItem>
+            <ListItem>This is a bullet-point</ListItem>
+            <ListItem>This is a bullet-point</ListItem>
+            <ListItem>This is a bullet-point</ListItem>
           </List>
           <Seperator />
           <ParallaxContainer.SectionLabel />

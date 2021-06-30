@@ -4,7 +4,7 @@ import Layout from 'components/layout/Layout';
 import { Container } from 'components/container/Container';
 import { SplitContainer } from 'components/splitContainer/SplitContainer';
 import { Form, Input, Button } from 'components/form/Form';
-import { Title, Subtitle, Heading, Paragraph, Note, Seperator } from 'components/typography/TypographyDark';
+import { Title, Subtitle, Heading, Paragraph, Note, Seperator } from 'components/typography/Typography';
 
 function ContactPage() {
   return (
