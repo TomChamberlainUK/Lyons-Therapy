@@ -17,7 +17,7 @@
 }
 
 .paragraph {
-  @include typography.paragraph(var(--text-light-low-emphasis));
+  @include typography.paragraph(var(--text-light-high-emphasis));
 }
 
 .note {
