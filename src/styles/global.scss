@@ -1,10 +1,17 @@
+@use './normalize';
+@use './colors';
+
 :root {
   // Colours
-  --color-light: rgb(255,255,255);
-  --color-dark: rgb(62,112,109);
-  --color-primary: rgb(242,141,101);
-  --color-secondary: rgb(143,171,182);
-  --color-accent: rgb(244,231,219);
+  --color-light: #{ colors.$light };
+  --color-light-dark: #{ colors.$light-dark };
+  --color-dark: #{ colors.$dark };
+  --color-dark-dark: #{ colors.$dark-dark };
+  --color-primary: #{ colors.$primary };
+  --color-secondary: #{ colors.$secondary };
+  --color-secondary-dark: #{ colors.$secondary-dark };
+  --color-accent: #{ colors.$accent };
+  --color-accent-dark: #{ colors.$accent-dark };
   // Text colours dark (for use on light background, can also be used with primary, secondary & accent)
   --text-dark-contrast: rgba(0,0,0,1);
   --text-dark-high-emphasis: rgba(0,0,0,0.87);

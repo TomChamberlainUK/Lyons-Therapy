@@ -1,0 +1,17 @@
+@use 'sass:color';
+
+// Light & shades
+$light: rgb(255,255,255);
+$light-dark: color.scale($light, $lightness: -25%);
+// Dark & shades
+$dark: rgb(62,112,109);
+$dark-dark: color.scale($dark, $lightness: -25%);
+// Primary & shades
+$primary: rgb(242,141,101);
+$primary-dark: color.scale($primary, $lightness: -25%);
+// Secondary & shades
+$secondary: rgb(143,171,182);
+$secondary-dark: color.scale($secondary, $lightness: -25%);
+// Accent & shades
+$accent: rgb(244,231,219);
+$accent-dark: color.scale($accent, $lightness: -25%);
