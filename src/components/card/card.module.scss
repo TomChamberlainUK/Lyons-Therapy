@@ -1,0 +1,75 @@
+.card {
+  border: {
+    radius: 1rem;
+    bottom: 0.25rem solid var(--color-secondary);
+  }
+  width: calc(100vw - 2rem);
+  background-color: white;
+  overflow: hidden;
+  scroll-snap-align: center;
+
+  @media screen and (min-width: 400px) {
+    width: calc((100vw - 6rem - 2rem) / 3);
+    transition: transform 0.25s;
+  }
+
+  &:hover {
+    @media screen and (min-width: 400px) {
+      transform: translate3d(0,-0.5rem,0);
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-secondary);
+  }
+
+  &__body {
+    padding: 1rem;
+    color: var(--text-dark-high-emphasis);
+    font-family: 'Libre Baskerville', 'Times New Roman', times, serif;
+    line-height: 150%;
+  }
+
+  &__icon {
+    width: 16rem;
+    height: 16rem;
+  }
+}
+
+// For shadow
+.card-wrapper {
+  position: relative;
+  z-index: 1;
+
+  &::after { 
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 1rem;
+    background-color: rgba(0,0,0,0.25);
+    box-shadow: 0 0 0.5rem rgba(0,0,0,0.25);
+
+    @media screen and (min-width: 400px) {
+      transition: {
+        property: opacity, filter;
+        duration: 0.25s;
+      }
+    }
+  }
+
+  &:hover {
+    &::after {
+      @media screen and (min-width: 400px) {
+        filter: blur(0.25rem);
+        opacity: 0.75;
+      }
+    }
+  }
+}
