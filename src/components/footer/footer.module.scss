@@ -1,11 +1,66 @@
+@use 'styles/typography';
+
 .footer {
+  display: grid;
+  justify-items: stretch;
+  grid-template:
+    [row1-start] "logo"        [row1-end]
+    [row2-start] "badge"       [row2-end]
+    [row3-start] "legal-strip" [row3-end];
+  width: 100%;
+  background-color: var(--color-dark);
+  color: var(--text-light-contrast);
+
+  @media screen and (min-width: 400px) {
+    // justify-content: space-between;
+    grid-template:
+      [row1-start] "logo              badge" [row1-end]
+      [row2-start] "legal-strip legal-strip" [row2-end];
+  }
+}
+
+.logo {
+  grid-area: logo;
+  justify-self: center;
+  align-self: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 1rem;
+  border: 0.125rem solid white;
+  border-radius: 50%;
+  width: 128px;
+  height: 128px;
+  font-size: 1.25rem;
+  text-align: center;
 
-  height: 15rem;
-  background-color: var(--color-dark);
+  @media screen and (min-width: 400px) {
+    margin: 3rem;
+    justify-self: start;
+  }
+}
 
-  color: var(--text-light-contrast);
-  font-size: 2rem;
+.bacp-badge {
+  grid-area: badge;
+  justify-self: end;
+  align-self: center;
+  margin: 1rem;
+  border: 1rem solid white;
+  width: auto;
+
+  @media screen and (min-width: 400px) {
+    margin: 3rem;
+    width: 12rem;
+  }
+}
+
+.legal-strip {
+  @include typography.paragraph(var(--text-light-high-emphasis));
+  grid-area: legal-strip;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-dark-dark);
+
+  @media screen and (min-width: 400px) {
+    padding: 0.5rem 3rem;
+  }
 }
