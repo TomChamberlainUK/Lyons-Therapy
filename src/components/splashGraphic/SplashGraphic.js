@@ -7,7 +7,7 @@ export default function SplashGraphic() {
   return (
     <div className={styles.container}>
       <StaticImage
-        src="../images/logo-circular-accent.png"
+        src="../../images/logo-circular-accent.png"
         alt="Logo"
         objectFit="contain"
         className={styles.logo}
