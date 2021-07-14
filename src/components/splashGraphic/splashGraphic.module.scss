@@ -1,0 +1,46 @@
+.container {
+  display: grid;
+  gap: 1rem;
+  grid-template:
+    [row1-start] "logo logo logo logo" [row1-end]
+    [row2-start] "box-primary box-accent box-secondary box-dark" 4rem [row2-end];
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+
+  @media screen and (min-width: 400px) {
+    padding: {
+      top: 3rem;
+      left: 0;
+      right: 3rem;
+      bottom: 0;
+    }
+    height: calc(100vh - var(--size-header-height));
+  }
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.box {
+  &--primary {
+    grid-area: box-primary;
+    background-color: var(--color-primary);
+  }
+
+  &--secondary {
+    grid-area: box-secondary;
+    background-color: var(--color-secondary);
+  }
+
+  &--accent {
+    grid-area: box-accent;
+    background-color: var(--color-accent);
+  }
+
+  &--dark {
+    grid-area: box-dark;
+    background-color: var(--color-dark);
+  }
+}
