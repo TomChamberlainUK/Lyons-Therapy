@@ -1,9 +1,42 @@
 .container {
   box-sizing: border-box;
   padding: 1rem;
-  max-width: 40rem;
+
+  &--full-height {
+    height: 100%;
+  }
+
+  &--color-accent {
+    background-color: var(--color-accent);
+  }
 
   @media screen and (min-width: 400px) {
     padding: 3rem;
   }
+}
+
+.split-container {
+  display: flex;
+  flex-flow: column-reverse;
+
+  @media screen and (min-width: 400px) {
+    flex-flow: row-reverse;
+    min-height: calc(100vh - var(--size-header-height));
+  }
+
+  &__primary {
+    @media screen and (min-width: 400px) {
+      width: 60%;
+    }
+  }
+
+  &__secondary {
+    @media screen and (min-width: 400px) {
+      width: 40%;
+    }
+  }
+}
+
+.text-container {
+  max-width: 34rem;
 }
