@@ -1,3 +1,5 @@
+@use 'styles/breakpoints';
+
 .container {
   box-sizing: border-box;
   padding: 1rem;
@@ -10,7 +12,7 @@
     background-color: var(--color-accent);
   }
 
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: breakpoints.$tablet) {
     padding: 3rem;
   }
 }
@@ -19,19 +21,19 @@
   display: flex;
   flex-flow: column-reverse;
 
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: breakpoints.$desktop), (orientation: landscape) {
     flex-flow: row-reverse;
     min-height: calc(100vh - var(--size-header-height));
   }
 
   &__primary {
-    @media screen and (min-width: 400px) {
+    @media screen and (min-width: breakpoints.$desktop), (orientation: landscape) {
       width: 60%;
     }
   }
 
   &__secondary {
-    @media screen and (min-width: 400px) {
+    @media screen and (min-width: breakpoints.$desktop), (orientation: landscape) {
       width: 40%;
     }
   }

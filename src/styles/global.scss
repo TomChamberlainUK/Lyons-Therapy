@@ -1,5 +1,6 @@
 @use './normalize';
 @use './colors';
+@use './breakpoints';
 
 :root {
   // Colours
@@ -30,13 +31,20 @@
 
   // Responsive sizing
   --size-header-height: 3rem;
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: breakpoints.$desktop) {
     --size-header-height: 4.5rem;
   }
 }
 
 html, body, #___gatsby, #gatsby-focus-wrapper {
   height: 100%;
+}
+
+html {
+  font-size: 16px;
+  @media screen and (min-width: breakpoints.$desktop) {
+    font-size: 1.25vw;
+  }
 }
 
 body {

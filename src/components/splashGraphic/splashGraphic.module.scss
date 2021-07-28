@@ -1,3 +1,5 @@
+@use 'styles/breakpoints';
+
 .container {
   display: grid;
   gap: 1rem;
@@ -8,7 +10,11 @@
   padding: 1rem;
   width: 100%;
 
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: breakpoints.$tablet) {
+    padding: 3rem;
+  }
+
+  @media screen and (min-width: breakpoints.$desktop) {
     padding: {
       top: 3rem;
       left: 0;

@@ -1,3 +1,5 @@
+@use 'styles/breakpoints';
+
 .header {
   position: fixed;
   top: 0;
@@ -12,11 +14,11 @@
   background: var(--color-light);
   box-shadow: 0 2px 2px rgba(0,0,0,0.2);
 
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: breakpoints.$tablet) {
     justify-content: left;
   }
 
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: breakpoints.$desktop) {
     grid-template-columns: auto auto;
     justify-content: space-between;
     box-sizing: border-box;
@@ -43,7 +45,7 @@
   background: none;
   cursor: pointer;
 
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: breakpoints.$desktop) {
     display: none;
   }
 

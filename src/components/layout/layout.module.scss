@@ -1,3 +1,5 @@
+@use 'styles/breakpoints';
+
 .root {
   width: 100%;
   height: 100%;
@@ -20,21 +22,21 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
 
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: breakpoints.$tablet) {
     padding: 3rem;
   }
 
   // Hacky fix to annoying issue with overflow container end padding detailed here: https://github.com/w3c/csswg-drafts/issues/129
   // Remove end padding as it is not displayed in safari and other browsers
   padding-right: 0;
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: breakpoints.$tablet) {
     padding-right: 0rem;
   }
   // Add margins for gutters between items, also replace padding just removed
   & > * {
     margin-right: 1rem;
     &:last-child {
-      @media screen and (min-width: 400px) {
+      @media screen and (min-width: breakpoints.$tablet) {
         margin-right: 3rem;
       }
     }

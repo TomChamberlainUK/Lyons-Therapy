@@ -1,3 +1,4 @@
+@use 'styles/breakpoints';
 @use 'styles/typography';
 
 .footer {
@@ -11,8 +12,7 @@
   background-color: var(--color-dark);
   color: var(--text-light-contrast);
 
-  @media screen and (min-width: 400px) {
-    // justify-content: space-between;
+  @media screen and (min-width: breakpoints.$tablet) {
     grid-template:
       [row1-start] "logo              badge" [row1-end]
       [row2-start] "legal-strip legal-strip" [row2-end];
@@ -34,7 +34,7 @@
   font-size: 1.25rem;
   text-align: center;
 
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: breakpoints.$tablet) {
     margin: 3rem;
     justify-self: start;
   }
@@ -48,7 +48,7 @@
   border: 1rem solid white;
   width: auto;
 
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: breakpoints.$tablet) {
     margin: 3rem;
     width: 12rem;
   }
@@ -60,7 +60,7 @@
   padding: 0.5rem 1rem;
   background-color: var(--color-dark-dark);
 
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: breakpoints.$tablet) {
     padding: 0.5rem 3rem;
   }
 }
