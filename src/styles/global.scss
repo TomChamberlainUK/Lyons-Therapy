@@ -34,6 +34,7 @@
   @media screen and (min-width: breakpoints.$desktop) {
     --size-header-height: 4.5rem;
   }
+  --size-scrollbar-width: 0; // Set via javascript
 }
 
 html, body, #___gatsby, #gatsby-focus-wrapper {

@@ -5,17 +5,17 @@
     radius: 1rem;
     bottom: 0.25rem solid var(--color-secondary);
   }
-  width: calc(100vw - 2rem);
+  width: calc(100vw - var(--size-scrollbar-width) - 2rem);
   background-color: white;
   overflow: hidden;
   scroll-snap-align: center;
 
   @media screen and (min-width: breakpoints.$tablet) {
-    width: calc((100vw - 6rem - 1rem) / 2);
+    width: calc((100vw - var(--size-scrollbar-width) - 6rem - 1rem) / 2);
   }
 
   @media screen and (min-width: breakpoints.$desktop) {
-    width: calc((100vw - 6rem - 2rem) / 3);
+    width: calc((100vw - var(--size-scrollbar-width) - 6rem - 2rem) / 3);
     transition: transform 0.25s;
   }
 

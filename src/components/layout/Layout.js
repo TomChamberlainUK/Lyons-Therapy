@@ -8,6 +8,13 @@ import Card from 'components/card/Card';
 import * as styles from './layout.module.scss';
 import 'styles/global.scss';
 
+function calculateScrollBarWidth() {
+  document.documentElement.style.setProperty('--size-scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + 'px');
+}
+window.addEventListener('resize', calculateScrollBarWidth, false);
+document.addEventListener('DOMContentLoaded', calculateScrollBarWidth, false);
+document.addEventListener('load', calculateScrollBarWidth);
+
 function Layout({ children, pageTitle }) {
   return (
     <div className={styles.root}>
