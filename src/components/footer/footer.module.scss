@@ -55,12 +55,14 @@
 }
 
 .legal-strip {
-  @include typography.paragraph(var(--text-light-high-emphasis));
+  @include typography.note(var(--text-light-high-emphasis));
   grid-area: legal-strip;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 1rem;
   background-color: var(--color-dark-dark);
+  display: flex;
+  justify-content: space-between;
 
   @media screen and (min-width: breakpoints.$tablet) {
-    padding: 0.5rem 3rem;
+    padding: 0.25rem 3rem;
   }
 }
