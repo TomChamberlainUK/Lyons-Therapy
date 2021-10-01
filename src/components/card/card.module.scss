@@ -5,17 +5,10 @@
     radius: 1rem;
     bottom: 0.25rem solid var(--color-secondary);
   }
-  width: calc(100vw - var(--size-scrollbar-width) - 2rem);
   background-color: white;
   overflow: hidden;
-  scroll-snap-align: center;
-
-  @media screen and (min-width: breakpoints.$tablet) {
-    width: calc((100vw - var(--size-scrollbar-width) - 6rem - 1rem) / 2);
-  }
 
   @media screen and (min-width: breakpoints.$desktop) {
-    width: calc((100vw - var(--size-scrollbar-width) - 6rem - 2rem) / 3);
     transition: transform 0.25s;
   }
 
@@ -48,7 +41,19 @@
 // For shadow
 .card-wrapper {
   position: relative;
+  flex-shrink: 0;
   z-index: 1;
+  width: calc(100% - 1rem);
+  scroll-snap-align: center;
+
+  @media screen and (min-width: breakpoints.$tablet) {
+    width: calc((100% - 3rem - 1rem) / 2);
+    scroll-snap-align: start;
+  }
+
+  @media screen and (min-width: breakpoints.$desktop) {
+    width: calc((100% - 3rem - 2rem) / 3);
+  }
 
   &::after { 
     content: "";
