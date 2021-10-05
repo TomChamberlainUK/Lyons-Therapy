@@ -8,7 +8,7 @@ import * as styles from './asideCards.module.scss';
 export default function AsideCards() {
 
   // Index of card to scroll to
-  const [scrollIndex, setScrollIndex] = useState(0);
+  const [scrollIndex, setScrollIndex] = useState(null);
   // First and last index of cards shown
   const [minIndex, setMinIndex] = useState(0);
   const [maxIndex, setMaxIndex] = useState(0);
@@ -35,6 +35,7 @@ export default function AsideCards() {
 
   // Scroll to card when scroll index is updated
   useEffect(() => {
+    if (scrollIndex === null) return;
     cardRefs.current[scrollIndex].scrollIntoView({
       behavior: 'smooth',
       block: 'nearest',
