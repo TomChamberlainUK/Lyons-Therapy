@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 
 import * as styles from './card.module.scss';
 
-export default function Card({ children }) {
+export default forwardRef(function Card({ children }, ref) {
   return (
-    <div className={styles.cardWrapper}>
+    <div
+      className={styles.cardWrapper}
+      ref={ref}
+    >
       <div className={styles.card}>
         <div className={styles.card__header}>
           <StaticImage
@@ -20,4 +23,4 @@ export default function Card({ children }) {
       </div>
     </div>
   )
-}
+});

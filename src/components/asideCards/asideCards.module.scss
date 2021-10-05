@@ -1,0 +1,50 @@
+@use 'styles/breakpoints';
+
+.aside-cards {
+  position: relative;
+
+  &__controls {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__inner {
+    display: flex;
+    // gap: 1rem; // Removed in favor of margins as they work better with below hack. left in incase they finally fix overflow padding and children margins spec
+    box-sizing: border-box;
+    padding: 1.5rem 1rem;
+    width: 100%;
+    background-color: whitesmoke;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    @media screen and (min-width: breakpoints.$tablet) {
+      padding: 3rem;
+      scroll-padding-left: 3rem;
+    }
+
+    // Hacky fix to annoying issue with overflow container end padding detailed here: https://github.com/w3c/csswg-drafts/issues/129
+    // Remove end padding as it is not displayed in safari and other browsers
+    padding-right: 0;
+    @media screen and (min-width: breakpoints.$tablet) {
+      padding-right: 0rem;
+    }
+    // Add margins for gutters between items, also replace padding just removed
+    & > * {
+      margin-right: 1rem;
+      &:last-child {
+        @media screen and (min-width: breakpoints.$tablet) {
+          margin-right: 3rem;
+        }
+      }
+    }
+    // psuedo element to ensure last child's margin-right is taken into account in scrollable content
+    &::after {
+      content: "";
+      flex: 0 0 0.02px;
+    }
+    // End of hack fix
+  }
+}
