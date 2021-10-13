@@ -12,10 +12,12 @@ export default function SplashGraphic() {
         objectFit="contain"
         className={styles.logo}
       />
-      <div className={styles.boxPrimary} />
-      <div className={styles.boxSecondary} />
-      <div className={styles.boxDark} />
-      <div className={styles.boxAccent} />
+      <div className={styles.boxes} >
+        <div className={`${styles.box} ${styles.boxPrimary}`} />
+        <div className={`${styles.box} ${styles.boxAccent}`} />
+        <div className={`${styles.box} ${styles.boxSecondary}`} />
+        <div className={`${styles.box} ${styles.boxDark}`} />
+      </div>
     </div>
   );
 }

@@ -13,6 +13,7 @@ function IndexPage() {
     <Layout pageTitle="Home">
       <SplitContainer
         subContent={<SplashGraphic />}
+        centered={true}
       >
         <Container>
           <TextContainer>

@@ -21,19 +21,23 @@
   display: flex;
   flex-flow: column-reverse;
 
-  @media screen and (min-width: breakpoints.$desktop), (orientation: landscape) {
+  &--centered {
+    align-items: center;
+  }
+
+  @media screen and (min-width: breakpoints.$tablet) and (orientation: landscape) {
     flex-flow: row-reverse;
     min-height: calc(100vh - var(--size-header-height));
   }
 
   &__primary {
-    @media screen and (min-width: breakpoints.$desktop), (orientation: landscape) {
+    @media screen and (min-width: breakpoints.$tablet) and (orientation: landscape) {
       width: 60%;
     }
   }
 
   &__secondary {
-    @media screen and (min-width: breakpoints.$desktop), (orientation: landscape) {
+    @media screen and (min-width: breakpoints.$tablet) and (orientation: landscape) {
       width: 40%;
     }
   }

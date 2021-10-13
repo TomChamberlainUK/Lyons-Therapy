@@ -12,9 +12,9 @@ export function Container({ children, fullHeight, backgroundColor }) {
   return <div className={classes}>{children}</div>
 }
 
-export function SplitContainer({ children, subContent }) {
+export function SplitContainer({ children, subContent, centered }) {
   return (
-    <div className={styles.splitContainer}>
+    <div className={`${styles.splitContainer} ${centered && styles.splitContainerCentered}`}>
       <div className={styles.splitContainer__secondary}>
         {subContent}
       </div>
