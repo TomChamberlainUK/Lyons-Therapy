@@ -3,10 +3,27 @@
 .card {
   border: {
     radius: 1rem;
-    bottom: 0.25rem solid var(--color-secondary);
+    bottom: 0.25rem solid;
   }
+  height: 100%;
   background-color: white;
   overflow: hidden;
+
+  &--primary {
+    border-color: var(--color-primary);
+  }
+
+  &--secondary {
+    border-color: var(--color-secondary);
+  }
+
+  &--accent {
+    border-color: var(--color-accent);
+  }
+
+  &--dark {
+    border-color: var(--color-dark);
+  }
 
   @media screen and (min-width: breakpoints.$desktop) {
     transition: transform 0.25s;
@@ -22,7 +39,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-secondary);
+
+    &--primary {
+      background-color: var(--color-primary);
+    }
+  
+    &--secondary {
+      background-color: var(--color-secondary);
+    }
+  
+    &--accent {
+      background-color: var(--color-accent);
+    }
+  
+    &--dark {
+      background-color: var(--color-dark);
+    }
   }
 
   &__body {
@@ -30,11 +62,6 @@
     color: var(--text-dark-high-emphasis);
     font-family: 'Libre Baskerville', 'Times New Roman', times, serif;
     line-height: 150%;
-  }
-
-  &__icon {
-    width: 16rem;
-    height: 16rem;
   }
 }
 
@@ -44,11 +71,10 @@
   flex-shrink: 0;
   z-index: 1;
   width: calc(100% - 1rem);
-  scroll-snap-align: center;
+  scroll-snap-align: start;
 
   @media screen and (min-width: breakpoints.$tablet) {
     width: calc((100% - 3rem - 1rem) / 2);
-    scroll-snap-align: start;
   }
 
   @media screen and (min-width: breakpoints.$desktop) {
