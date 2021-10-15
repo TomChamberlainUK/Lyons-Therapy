@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 import * as stylesDark from './typographyDark.module.scss';
 import * as stylesLight from './typographyLight.module.scss';
@@ -16,40 +16,103 @@ export default function TypographyTheme(theme) {
   }
 
   return {
-    Title: function Title({ children }) {
-      return <h1 className={styles.title}>{children}</h1>
-    },
+    Title: forwardRef(function Title({ children }, ref) {
+      return (
+        <h1
+          ref={ref}
+          className={styles.title}
+        >
+          {children}
+        </h1>
+      );
+    }),
 
-    Subtitle: function Subtitle({ children }) {
-      return <p className={styles.subtitle}>{children}</p>
-    },
+    Subtitle: forwardRef(function Subtitle({ children }, ref) {
+      return (
+        <p
+          ref={ref}
+          className={styles.subtitle}
+        >
+          {children}
+        </p>
+      );
+    }),
 
-    Heading: function Heading({ children }) {
-      return <h2 className={styles.heading}>{children}</h2>
-    },
+    Heading: forwardRef(function Heading({ children }, ref) {
+      return (
+        <h2
+          ref={ref}
+          className={styles.heading}
+        >
+          {children}
+        </h2>
+      );
+    }),
     
-    Subheading: function Subheading({ children }) {
-      return <h3 className={styles.subheading}>{children}</h3>
-    },
+    Subheading: forwardRef(function Subheading({ children }, ref) {
+      return (
+        <h3
+          ref={ref}
+          className={styles.subheading}
+        >
+          {children}
+        </h3>
+      );
+    }),
     
-    Paragraph: function Paragraph({ children }) {
-      return <p className={styles.paragraph}>{children}</p>
-    },
+    Paragraph: forwardRef(function Paragraph({ children }, ref) {
+      return (
+        <p
+          ref={ref}
+          className={styles.paragraph}
+        >
+          {children}
+        </p>
+      );
+    }),
     
-    Note: function Note({ children }) {
-      return <p><small className={styles.note}>{children}</small></p>
-    },
+    Note: forwardRef(function Note({ children }, ref) {
+      return (
+        <p ref={ref} >
+          <small className={styles.note} >
+            {children}
+          </small>
+        </p>
+      );
+    }),
     
-    Seperator: function Seperator({ isBold }) {
-      return <hr className={`${styles.seperator} ${isBold && styles.seperatorIsBold}`}/>
-    },
+    Seperator: forwardRef(function Seperator({ isBold }, ref) {
+      return (
+        <hr
+          ref={ref}
+          className={`
+            ${styles.seperator}
+            ${isBold && styles.seperatorIsBold}
+          `}
+        />
+      );
+    }),
     
-    List: function List({ children }) {
-      return <ul className={styles.list}>{children}</ul>
-    },
+    List: forwardRef(function List({ children }, ref) {
+      return (
+        <ul
+          ref={ref}
+          className={styles.list}
+        >
+          {children}
+        </ul>
+      );
+    }),
     
-    ListItem: function ListItem({ children }) {
-      return <li className={styles.list__item}>{children}</li>
-    }
+    ListItem: forwardRef(function ListItem({ children }, ref) {
+      return (
+        <li
+          ref={ref}
+          className={styles.list__item}
+        >
+          {children}
+        </li>
+      );
+    })
   }
 }

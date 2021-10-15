@@ -1,4 +1,6 @@
 import React, { useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import "@fontsource/material-icons";
 import "@fontsource/libre-baskerville";
 
@@ -8,6 +10,11 @@ import AsideCards from 'components/asideCards/AsideCards';
 
 import * as styles from './layout.module.scss';
 import 'styles/global.scss';
+
+gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.defaults({
+  // markers: true
+});
 
 function Layout({ children, pageTitle }) {
 

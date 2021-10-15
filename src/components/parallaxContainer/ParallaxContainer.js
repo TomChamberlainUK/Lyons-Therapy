@@ -1,15 +1,9 @@
 import React, { useRef, forwardRef, useEffect } from 'react';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import * as styles from './parallaxContainer.module.scss';
 import mapReactDescendants from 'utilities/map-react-descendants';
 import makeRangeIterator from 'utilities/make-range-iterator';
-
-gsap.registerPlugin(ScrollTrigger);
-ScrollTrigger.defaults({
-  // markers: true
-});
 
 function ParallaxContainer({ images = [], children }) {
 

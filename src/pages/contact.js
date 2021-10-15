@@ -1,4 +1,6 @@
-import * as React from 'react';
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import Layout from 'components/layout/Layout';
 import { Container, SplitContainer, TextContainer } from 'components/container/Container';
@@ -7,6 +9,50 @@ import { Button } from 'components/button/Button';
 import { Title, Subtitle, Heading, Paragraph, Note, Seperator } from 'components/typography/Typography';
 
 function ContactPage() {
+
+  const textRefs = useRef([]);
+
+  // Better than pushing to textRef array? needs research
+  let textRefCount = 0;
+  function getNextTextRefIndex() {
+    textRefCount++;
+    return textRefCount - 1;
+  }
+
+  useEffect(() => {
+
+    gsap.set(textRefs.current, { opacity: 0, y: 16 });
+    ScrollTrigger.batch(textRefs.current, {
+      interval: 0.1,
+      batchMax: 5,
+      onEnter: batch => gsap.to(batch, {
+        opacity: 1,
+        y: 0,
+        stagger: 0.15,
+        overwrite: true
+      }),
+      onLeave: batch => gsap.set(batch, {
+        opacity: 0,
+        y: -16,
+        overwrite: true
+      }),
+      onEnterBack: batch => gsap.to(batch, {
+        opacity: 1,
+        y: 0,
+        stagger: 0.15,
+        overwrite: true
+      }),
+      onLeaveBack: batch => gsap.set(batch, {
+        opacity: 0,
+        y: 16,
+        overwrite: true
+      })
+    });
+
+    ScrollTrigger.addEventListener("refreshInit", () => gsap.set(textRefs.current, { y: 0 }));
+
+  }, [textRefs]);
+  
   return (
     <Layout pageTitle="Contact">
       <SplitContainer subContent={
@@ -63,11 +109,11 @@ function ContactPage() {
       }>
         <Container>
           <TextContainer>
-            <Title>Contact</Title>
-            <Subtitle>There's going to be a form</Subtitle>
+            <Title ref={ref => textRefs.current[getNextTextRefIndex()] = ref} >Contact</Title>
+            <Subtitle ref={ref => textRefs.current[getNextTextRefIndex()] = ref} >There's going to be a form</Subtitle>
             <Seperator isBold={true} />
-            <Heading>Heading</Heading>
-            <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel libero nisi. Sed euismod mattis gravida. In pulvinar, metus id tincidunt aliquam, mauris sapien consequat turpis, id malesuada sem lorem non ligula. Vestibulum dignissim metus nec justo dignissim, egestas suscipit orci tempus. Nunc a dolor urna. Fusce vel metus eget sapien feugiat consectetur sed molestie diam. Maecenas nisl metus, tempus commodo ullamcorper eget, porttitor sed metus. Nulla a arcu eu augue porta tincidunt nec ut felis.</Paragraph>
+            <Heading ref={ref => textRefs.current[getNextTextRefIndex()] = ref} >Heading</Heading>
+            <Paragraph ref={ref => textRefs.current[getNextTextRefIndex()] = ref} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel libero nisi. Sed euismod mattis gravida. In pulvinar, metus id tincidunt aliquam, mauris sapien consequat turpis, id malesuada sem lorem non ligula. Vestibulum dignissim metus nec justo dignissim, egestas suscipit orci tempus. Nunc a dolor urna. Fusce vel metus eget sapien feugiat consectetur sed molestie diam. Maecenas nisl metus, tempus commodo ullamcorper eget, porttitor sed metus. Nulla a arcu eu augue porta tincidunt nec ut felis.</Paragraph>
           </TextContainer>
         </Container>
       </SplitContainer>
