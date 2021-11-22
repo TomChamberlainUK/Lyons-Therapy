@@ -11,6 +11,92 @@ import * as styles from './asideCards.module.scss';
 //       Implement a fix for this, perhaps by updating scroll index when a button is pressed instead of just
 //       when the intersection observer observes a change.
 
+// Build card data
+// TODO: add alts to each image
+const cardContents = [
+  {
+    color: 'primary',
+    icon: <StaticImage
+      src="../../images/icon-heads.jpg"
+      alt="PLACEHOLDER"
+      className={styles.cardIcon}
+    />,
+    text: 'We understand our existence as individuals within and through our relationships with others.'
+  },
+  {
+    color: 'accent',
+    icon: <StaticImage
+      src="../../images/icon-particles.jpg"
+      alt="PLACEHOLDER"
+      className={styles.cardIcon}
+    />,
+    text: 'Everyone\'s life is unique. There are as many ways to suffer as there are to heal.'
+  },
+  {
+    color: 'secondary',
+    icon: <StaticImage
+      src="../../images/icon-star.jpg"
+      alt="PLACEHOLDER"
+      className={styles.cardIcon}
+    />,
+    text: 'How can we know how someone else experiences the world without hearing it from them first?'
+  },
+  {
+    color: 'dark',
+    icon: <StaticImage
+      src="../../images/icon-stairs.jpg"
+      alt="PLACEHOLDER"
+      className={styles.cardIcon}
+    />,
+    text: 'We all struggle at times with the ultimate concerns of life and death.'
+  },
+  {
+    color: 'primary',
+    icon: <StaticImage
+      src="../../images/icon-speech.jpg"
+      alt="PLACEHOLDER"
+      className={styles.cardIcon}
+    />,
+    text: 'Positive therapeutic relationships are built on a foundation of empathy and trust.'
+  },
+  {
+    color: 'accent',
+    icon: <StaticImage
+      src="../../images/icon-waves.jpg"
+      alt="PLACEHOLDER"
+      className={styles.cardIcon}
+    />,
+    text: 'It\'s important to normalise and accept distress in a world which often tries to diagnose and medicalise human suffering'
+  },
+  {
+    color: 'secondary',
+    icon: <StaticImage
+      src="../../images/icon-orbit.jpg"
+      alt="PLACEHOLDER"
+      className={styles.cardIcon}
+    />,
+    text: 'Our mental health is intrinsically linked to our physical health, our relational world, our history and our beliefs.'
+  },
+  {
+    color: 'dark',
+    icon: <StaticImage
+      src="../../images/icon-growth.jpg"
+      alt="PLACEHOLDER"
+      className={styles.cardIcon}
+    />,
+    text: 'With obstacles removed, each of us have a propensity to move towards healing, change and growth.'
+  },
+  {
+    color: 'dark',
+    icon: <StaticImage
+      src="../../images/icon-sunset.jpg"
+      alt="PLACEHOLDER"
+      className={styles.cardIcon}
+    />,
+    text: 'By facing our struggles rather than trying to avoid or eliminate them, we can move forwards with our lives.'
+  }
+];
+
 
 // Indicator component displaying cards shown and available
 function Indicator({ display }) {
@@ -38,106 +124,6 @@ export default function AsideCards() {
   const [minIndex, setMinIndex] = useState(0);
   const [maxIndex, setMaxIndex] = useState(0);
 
-  // Build card data
-  // TODO: add alts to each image
-  const cardContents = [
-    {
-      color: 'primary',
-      icon: <StaticImage
-        src="../../images/icon-heads.jpg"
-        alt="PLACEHOLDER"
-        className={styles.cardIcon}
-      />,
-      text: 'We understand our existence as individuals within and through our relationships with others.'
-    },
-    {
-      color: 'accent',
-      icon: <StaticImage
-        src="../../images/icon-particles.jpg"
-        alt="PLACEHOLDER"
-        className={styles.cardIcon}
-      />,
-      text: 'Everyone\'s life is unique. There are as many ways to suffer as there are to heal.'
-    },
-    {
-      color: 'secondary',
-      icon: <StaticImage
-        src="../../images/icon-star.jpg"
-        alt="PLACEHOLDER"
-        className={styles.cardIcon}
-      />,
-      text: 'How can we know how someone else experiences the world without hearing it from them first?'
-    },
-    {
-      color: 'dark',
-      icon: <StaticImage
-        src="../../images/icon-stairs.jpg"
-        alt="PLACEHOLDER"
-        className={styles.cardIcon}
-      />,
-      text: 'We all struggle at times with the ultimate concerns of life and death.'
-    },
-    {
-      color: 'primary',
-      icon: <StaticImage
-        src="../../images/icon-speech.jpg"
-        alt="PLACEHOLDER"
-        className={styles.cardIcon}
-      />,
-      text: 'Positive therapeutic relationships are built on a foundation of empathy and trust.'
-    },
-    {
-      color: 'accent',
-      icon: <StaticImage
-        src="../../images/icon-waves.jpg"
-        alt="PLACEHOLDER"
-        className={styles.cardIcon}
-      />,
-      text: 'It\'s important to normalise and accept distress in a world which often tries to diagnose and medicalise human suffering'
-    },
-    {
-      color: 'secondary',
-      icon: <StaticImage
-        src="../../images/icon-orbit.jpg"
-        alt="PLACEHOLDER"
-        className={styles.cardIcon}
-      />,
-      text: 'Our mental health is intrinsically linked to our physical health, our relational world, our history and our beliefs.'
-    },
-    {
-      color: 'dark',
-      icon: <StaticImage
-        src="../../images/icon-growth.jpg"
-        alt="PLACEHOLDER"
-        className={styles.cardIcon}
-      />,
-      text: 'With obstacles removed, each of us have a propensity to move towards healing, change and growth.'
-    },
-    {
-      color: 'dark',
-      icon: <StaticImage
-        src="../../images/icon-sunset.jpg"
-        alt="PLACEHOLDER"
-        className={styles.cardIcon}
-      />,
-      text: 'By facing our struggles rather than trying to avoid or eliminate them, we can move forwards with our lives.'
-    }
-  ]
-
-  // Generate card components from data
-  const cards = cardContents.map(({color, icon, text}, i) => {
-    return (
-      <Card
-        color={color}
-        icon={icon}
-        key={i}
-        ref={ref => cardRefs.current[i] = ref}
-      >
-        {text}
-      </Card>
-    );
-  });
-
   // Generate indicators
   const indicators = [
     <Indicator
@@ -160,6 +146,20 @@ export default function AsideCards() {
       }
     />
   ];
+
+  // Generate card components from data
+  const cards = cardContents.map(({color, icon, text}, i) => {
+    return (
+      <Card
+        color={color}
+        icon={icon}
+        key={i}
+        ref={ref => cardRefs.current[i] = ref}
+      >
+        {text}
+      </Card>
+    );
+  });
   
   // Scroll to next card to left - loop if necessary
   function scrollLeft() {
@@ -179,6 +179,12 @@ export default function AsideCards() {
     }
   }
 
+  // Set CSS variable property for the containers horizontal scrollbar height
+  // This ensures bottom padding is uniform on all browsers - even you chrome
+  useEffect(() => {
+    const scrollbarHeight = containerRef.current.offsetHeight - containerRef.current.clientHeight;
+    document.documentElement.style.setProperty('--inner-cards-scrollbar-height', `${scrollbarHeight}px`);
+  }, []);
 
   // Scroll to card when scroll index is updated
   useEffect(() => {

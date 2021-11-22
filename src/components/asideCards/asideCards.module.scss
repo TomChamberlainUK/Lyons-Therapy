@@ -1,6 +1,10 @@
 @use 'styles/breakpoints';
 @use 'styles/buttons';
 
+:root {
+  --inner-cards-scrollbar-height: 0px; // This is calculated and set via javascript as the scrollbar's height varies per browser and could cause inconsistensies in the design
+}
+
 .button {
   @extend %discreet-button;
   color: var(--text-dark-high-emphasis);
@@ -46,7 +50,7 @@
     position: absolute;
     display: flex;
     align-items: center;
-    bottom: 1.5rem;
+    bottom: calc(1rem + var(--inner-cards-scrollbar-height));
     left: 50%;
     transform: translateX(-50%);
 
@@ -63,7 +67,7 @@
       left: 1rem;
       right: 1rem;
       top: 1.5rem;
-      bottom: 3rem;
+      bottom: calc(3.5rem + var(--inner-cards-scrollbar-height));
     }
     width: 100%;
     background-color: whitesmoke;
@@ -72,7 +76,11 @@
     scroll-padding-left: 1rem;
 
     @media screen and (min-width: breakpoints.$tablet) {
-      padding: 3rem;
+      padding: {
+        left: 3rem;
+        right: 3rem;
+        top: 3rem;
+      }
       scroll-padding-left: 3rem;
     }
 
