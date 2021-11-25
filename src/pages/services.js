@@ -61,6 +61,7 @@ function ServicesPage() {
             src="https://picsum.photos/seed/zz/1920/1080"
             alt="PLACEHOLDER IMAGE"
             placeholder="blurred"
+            loading="eager"
           />,
           <StaticImage
             src="https://picsum.photos/seed/x/1920/1080"

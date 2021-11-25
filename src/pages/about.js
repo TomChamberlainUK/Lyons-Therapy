@@ -62,6 +62,7 @@ function AboutPage() {
               src="https://picsum.photos/seed/a/1920/1080"
               alt="PLACEHOLDER IMAGE"
               placeholder="blurred"
+              loading="eager"
             />,
             <StaticImage
               src="https://picsum.photos/seed/b/1920/1080"
