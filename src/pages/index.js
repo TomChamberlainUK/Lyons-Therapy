@@ -4,9 +4,9 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import Layout from 'components/layout/Layout';
-import { Container, SplitContainer, TextContainer } from 'components/container/Container';
-import { Button, ButtonSet } from 'components/button/Button';
-import SplashGraphic from 'components/splashGraphic/SplashGraphic';
+import IndexContainer from 'components/indexContainer/IndexContainer';
+import { Container, TextContainer } from 'components/container/Container';
+import { Button } from 'components/button/Button';
 import { Title, Subtitle, Heading, Paragraph, Seperator } from 'components/typography/Typography';
 
 
@@ -57,10 +57,7 @@ function IndexPage() {
 
   return (
     <Layout pageTitle="Home">
-      <SplitContainer
-        subContent={<SplashGraphic />}
-        centered={true}
-      >
+      <IndexContainer>
         <Container>
           <TextContainer>
             <Title ref={ref => textRefs.current[getNextTextRefIndex()] = ref} >Toby Lyons</Title>
@@ -69,24 +66,16 @@ function IndexPage() {
             <Heading ref={ref => textRefs.current[getNextTextRefIndex()] = ref} >Counselling and Psychotherapy</Heading>
             <Paragraph ref={ref => textRefs.current[getNextTextRefIndex()] = ref} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel libero nisi. Sed euismod mattis gravida.</Paragraph>
             <Seperator />
-            <ButtonSet>
-              <Button
-                onClick={() => navigate('/contact')}
-                icon={'markunread'}
-                isPrimary={true}
-              >
-                Get in Touch!
-              </Button>
-              <Button onClick={() => navigate('/about')}>
-                Find Out More
-              </Button>
-              <Button onClick={() => navigate('/services')}>
-                What we Offer
-              </Button>
-            </ButtonSet>
+            <Button
+              onClick={() => navigate('/contact')}
+              icon={'markunread'}
+              isPrimary={true}
+            >
+              Arrange a Free Consultation
+            </Button>
           </TextContainer>
         </Container>
-      </SplitContainer>
+      </IndexContainer>
     </Layout>
   );
 }

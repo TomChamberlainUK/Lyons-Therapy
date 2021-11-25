@@ -1,0 +1,62 @@
+@use 'styles/breakpoints';
+
+.index-container {
+  width: 100%;
+
+  @media screen and (min-width: breakpoints.$desktop), (orientation: landscape) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.logoDesktop {
+  display: none;
+
+  @media screen and (min-width: breakpoints.$desktop), (orientation: landscape) {
+    display: block;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    width: 128px;
+  }
+}
+
+.logoMobile {
+  margin: {
+    top: -64px;
+    left: 50%;
+  }
+  width: 128px;
+  transform: translateX(-50%);
+
+  @media screen and (min-width: breakpoints.$desktop), (orientation: landscape) {
+    display: none;
+  }
+}
+
+.image-frame {
+  // z-index: 1;
+  position: relative;
+  padding-top: min(56.25%, calc(50vh - var(--size-header-height)));
+  width: 100%;
+  overflow: hidden;
+
+  @media screen and (min-width: breakpoints.$desktop), (orientation: landscape) {
+    padding-top: 0;
+    width: 40%;
+    height: calc(100vh - var(--size-header-height));
+  }
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.text-area {
+  @media screen and (min-width: breakpoints.$desktop), (orientation: landscape) {
+    width: 60%;
+  }
+}
