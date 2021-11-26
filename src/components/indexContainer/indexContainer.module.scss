@@ -9,7 +9,7 @@
   }
 }
 
-.logoDesktop {
+.logo-desktop-wrapper {
   display: none;
 
   @media screen and (min-width: breakpoints.$desktop), (orientation: landscape) {
@@ -17,25 +17,29 @@
     position: absolute;
     top: 3rem;
     right: 3rem;
-    width: 128px;
   }
 }
 
-.logoMobile {
-  margin: {
-    top: -64px;
-    left: 50%;
-  }
+.logo-desktop {
   width: 128px;
-  transform: translateX(-50%);
+}
+
+.logo-mobile-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: -64px;
+  width: 100%;
 
   @media screen and (min-width: breakpoints.$desktop), (orientation: landscape) {
     display: none;
   }
 }
 
+.logo-mobile {
+  width: 128px;
+}
+
 .image-frame {
-  // z-index: 1;
   position: relative;
   padding-top: min(56.25%, calc(50vh - var(--size-header-height)));
   width: 100%;
@@ -48,10 +52,14 @@
   }
 }
 
-.image {
+.image-wrapper {
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
+}
+
+.image {
   height: 100%;
 }
 
