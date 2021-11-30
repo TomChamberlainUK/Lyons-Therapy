@@ -1,3 +1,7 @@
+@mixin text-wrapper() {
+  max-width: 34rem;
+}
+
 @mixin title($color: black) {
   color: $color;
   font: {

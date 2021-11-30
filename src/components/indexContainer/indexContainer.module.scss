@@ -1,14 +1,5 @@
 @use 'styles/breakpoints';
 
-.index-container {
-  width: 100%;
-
-  @media screen and (min-width: breakpoints.$desktop), (orientation: landscape) {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-}
-
 .logo-desktop-wrapper {
   display: none;
 
@@ -40,6 +31,7 @@
 }
 
 .logo-mobile {
+  z-index: 2;
   width: 8rem;
 }
 
@@ -51,8 +43,7 @@
 
   @media screen and (min-width: breakpoints.$desktop), (orientation: landscape) {
     padding-top: 0;
-    width: 40%;
-    height: calc(100vh - var(--size-header-height));
+    height: 100%;
   }
 }
 
@@ -65,10 +56,4 @@
 
 .image {
   height: 100%;
-}
-
-.text-area {
-  @media screen and (min-width: breakpoints.$desktop), (orientation: landscape) {
-    width: 60%;
-  }
 }

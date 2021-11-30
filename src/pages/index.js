@@ -5,10 +5,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import Layout from 'components/layout/Layout';
 import IndexContainer from 'components/indexContainer/IndexContainer';
-import { TextContainer } from 'components/container/Container';
+import { TextWrapper, Title, Subtitle, Heading, Paragraph, Seperator } from 'components/typography/Typography';
 import { Button } from 'components/button/Button';
-import { Title, Subtitle, Heading, Paragraph, Seperator } from 'components/typography/Typography';
-
 
 function IndexPage() {
 
@@ -58,7 +56,7 @@ function IndexPage() {
   return (
     <Layout pageTitle="Home">
       <IndexContainer>
-          <TextContainer>
+          <TextWrapper>
             <Title ref={ref => textRefs.current[getNextTextRefIndex()] = ref} >Toby Lyons</Title>
             <Subtitle ref={ref => textRefs.current[getNextTextRefIndex()] = ref} >BA, PG Cert, PG Dip, MBACP</Subtitle>
             <Seperator isBold={true} />
@@ -72,7 +70,7 @@ function IndexPage() {
             >
               Arrange a Free Consultation
             </Button>
-          </TextContainer>
+          </TextWrapper>
       </IndexContainer>
     </Layout>
   );

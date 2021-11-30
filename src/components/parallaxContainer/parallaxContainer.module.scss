@@ -1,14 +1,5 @@
 @use 'styles/breakpoints';
 
-.parallax-container {
-  width: 100%;
-
-  @media screen and (min-width: breakpoints.$desktop), (orientation: landscape) {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-}
-
 .image-frame {
   z-index: 1;
   position: relative;
@@ -18,7 +9,6 @@
 
   @media screen and (min-width: breakpoints.$desktop), (orientation: landscape) {
     padding-top: 0;
-    width: 40%;
     height: calc(100vh - var(--size-header-height));
   }
 
@@ -40,10 +30,4 @@
 
 .image {
   height: 100%;
-}
-
-.text-area {
-  @media screen and (min-width: breakpoints.$desktop), (orientation: landscape) {
-    width: 60%;
-  }
 }

@@ -16,6 +16,9 @@ export default function TypographyTheme(theme) {
   }
 
   return {
+    TextWrapper: forwardRef(function TextWrapper({ children }, ref) {
+      return <div className={styles.textWrapper} ref={ref}>{children}</div>
+    }),
     Title: forwardRef(function Title({ children }, ref) {
       return (
         <h1

@@ -3,10 +3,11 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import Layout from 'components/layout/Layout';
-import { Container, SplitContainer, TextContainer } from 'components/container/Container';
+import SplitContainer from 'components/splitContainer/SplitContainer';
+import Container from 'components/container/Container';
+import { TextWrapper, Title, Subtitle, Heading, Paragraph, Note, Seperator } from 'components/typography/Typography';
 import { Form, Input } from 'components/form/Form';
 import { Button } from 'components/button/Button';
-import { Title, Subtitle, Heading, Paragraph, Note, Seperator } from 'components/typography/Typography';
 
 function ContactPage() {
 
@@ -108,13 +109,13 @@ function ContactPage() {
         </Container>
       }>
         <Container>
-          <TextContainer>
+          <TextWrapper>
             <Title ref={ref => textRefs.current[getNextTextRefIndex()] = ref} >Contact</Title>
             <Subtitle ref={ref => textRefs.current[getNextTextRefIndex()] = ref} >There's going to be a form</Subtitle>
             <Seperator isBold={true} />
             <Heading ref={ref => textRefs.current[getNextTextRefIndex()] = ref} >Heading</Heading>
             <Paragraph ref={ref => textRefs.current[getNextTextRefIndex()] = ref} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel libero nisi. Sed euismod mattis gravida. In pulvinar, metus id tincidunt aliquam, mauris sapien consequat turpis, id malesuada sem lorem non ligula. Vestibulum dignissim metus nec justo dignissim, egestas suscipit orci tempus. Nunc a dolor urna. Fusce vel metus eget sapien feugiat consectetur sed molestie diam. Maecenas nisl metus, tempus commodo ullamcorper eget, porttitor sed metus. Nulla a arcu eu augue porta tincidunt nec ut felis.</Paragraph>
-          </TextContainer>
+          </TextWrapper>
         </Container>
       </SplitContainer>
     </Layout>

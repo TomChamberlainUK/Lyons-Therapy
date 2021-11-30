@@ -1,0 +1,35 @@
+@use 'styles/breakpoints';
+
+.split-container {
+  display: flex;
+  flex-flow: column;
+
+  &--column-reverse {
+    flex-direction: column-reverse;
+  }
+
+  @media screen and (min-width: breakpoints.$tablet) and (orientation: landscape) {
+    flex-flow: row;
+    min-height: calc(100vh - var(--size-header-height));
+  }
+
+  &__primary {
+    @media screen and (min-width: breakpoints.$tablet) and (orientation: landscape) {
+      width: 50%;
+    }
+
+    @media screen and (min-width: breakpoints.$desktop) and (orientation: landscape) {
+      width: 61.8%;
+    }
+  }
+
+  &__secondary {
+    @media screen and (min-width: breakpoints.$tablet) and (orientation: landscape) {
+      width: 50%;
+    }
+
+    @media screen and (min-width: breakpoints.$desktop) and (orientation: landscape) {
+      width: 38.2%;
+    }
+  }
+}

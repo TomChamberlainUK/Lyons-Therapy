@@ -5,8 +5,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import Layout from 'components/layout/Layout';
 import ParallaxContainer from 'components/parallaxContainer/ParallaxContainer';
-import { Container, TextContainer } from 'components/container/Container';
-import { Title, Subtitle, Heading, Subheading, Paragraph, Note, Seperator, List, ListItem } from 'components/typography/Typography';
+import { Container } from 'components/container/Container';
+import { TextWrapper, Title, Subtitle, Heading, Subheading, Paragraph, Note, Seperator, List, ListItem } from 'components/typography/Typography';
 
 function ServicesPage() {
 
@@ -71,7 +71,7 @@ function ServicesPage() {
         ]
       }>
         <Container>
-          <TextContainer>
+          <TextWrapper>
             <Title ref={ref => textRefs.current[getNextTextRefIndex()] = ref} >Services</Title>
             <Subtitle ref={ref => textRefs.current[getNextTextRefIndex()] = ref} >Whatever that entails</Subtitle>
             <Seperator isBold={true} />
@@ -93,7 +93,7 @@ function ServicesPage() {
             <Paragraph ref={ref => textRefs.current[getNextTextRefIndex()] = ref} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel libero nisi. Sed euismod mattis gravida. In pulvinar, metus id tincidunt aliquam, mauris sapien consequat turpis, id malesuada sem lorem non ligula. Vestibulum dignissim metus nec justo dignissim, egestas suscipit orci tempus. Nunc a dolor urna. Fusce vel metus eget sapien feugiat consectetur sed molestie diam. Maecenas nisl metus, tempus commodo ullamcorper eget, porttitor sed metus. Nulla a arcu eu augue porta tincidunt nec ut felis.</Paragraph>
             <Seperator />
             <Note ref={ref => textRefs.current[getNextTextRefIndex()] = ref} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel libero nisi. Sed euismod mattis gravida. In pulvinar, metus id tincidunt aliquam, mauris sapien consequat turpis, id malesuada sem lorem non ligula. Vestibulum dignissim metus nec justo dignissim, egestas suscipit orci tempus. Nunc a dolor urna. Fusce vel metus eget sapien feugiat consectetur sed molestie diam. Maecenas nisl metus, tempus commodo ullamcorper eget, porttitor sed metus. Nulla a arcu eu augue porta tincidunt nec ut felis.</Note>
-          </TextContainer>
+          </TextWrapper>
         </Container>
       </ParallaxContainer>
     </Layout>

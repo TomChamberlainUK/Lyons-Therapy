@@ -1,11 +1,14 @@
 import React, { useRef, forwardRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 
-import * as styles from './parallaxContainer.module.scss';
+import { SplitContainer } from 'components/splitContainer/SplitContainer';
+
 import mapReactDescendants from 'utilities/map-react-descendants';
 import makeRangeIterator from 'utilities/make-range-iterator';
 
-function ParallaxContainer({ images = [], children }) {
+import * as styles from './parallaxContainer.module.scss';
+
+export function ParallaxContainer({ children, images = [] }) {
 
   // Refs for gsap transitions
   const containerRef = useRef(null);
@@ -62,16 +65,16 @@ function ParallaxContainer({ images = [], children }) {
   }, []);
 
   return (
-    <div
-      className={styles.parallaxContainer}
+    <SplitContainer
       ref={containerRef}
-    >
-      <div ref={imageFrameRef} className={styles.imageFrame}>
-        <div ref={imageFrameInnerRef} className={styles.imageFrame__inner}>
-          {
+      columnReverse={true}
+      subContent={
+        <div ref={imageFrameRef} className={styles.imageFrame}>
+         <div ref={imageFrameInnerRef} className={styles.imageFrame__inner}>
+           {
             // Style images and add refs dynamically
-            [...images].reverse() // reverse images array to compensate for z-index issues with positioning elements on top of each other
-                       .map((image, i) => {
+            images.reverse() // reverse images array to compensate for z-index issues with positioning elements on top of each other
+                  .map((image, i) => {
               return (
               <div
                 key={i}
@@ -85,21 +88,21 @@ function ParallaxContainer({ images = [], children }) {
           }
         </div>
       </div>
-      <div className={styles.textArea}>
-        {
-          // Map all descendants to dom and dynamically add refs to SectionLabels
-          mapReactDescendants(children, child => {
-            if (child.type === ParallaxContainer.SectionLabel) {
-              const it = sectionIt.next().value; // increase iteration on each component match
-              return React.cloneElement(child, {
-                ref: ref => { sectionRefs.current[it] = ref }
-              });
-            }
-            return child;
-          })
-        }
-      </div>
-    </div>
+      }
+    >
+      {
+        // Map all descendants to dom and dynamically add refs to SectionLabels
+        mapReactDescendants(children, child => {
+          if (child.type === ParallaxContainer.SectionLabel) {
+            const it = sectionIt.next().value; // increase iteration on each component match
+            return React.cloneElement(child, {
+              ref: ref => { sectionRefs.current[it] = ref }
+            });
+          }
+          return child;
+        })
+      }
+    </SplitContainer>
   )
 }
 

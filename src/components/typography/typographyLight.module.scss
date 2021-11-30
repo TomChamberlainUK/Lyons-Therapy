@@ -1,5 +1,9 @@
 @use 'styles/typography';
 
+.text-wrapper {
+  @include typography.text-wrapper();
+}
+
 .title {
   @include typography.title(var(--text-light-contrast));
 }

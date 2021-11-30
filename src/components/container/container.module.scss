@@ -16,33 +16,3 @@
     padding: 3rem;
   }
 }
-
-.split-container {
-  display: flex;
-  flex-flow: column-reverse;
-
-  &--centered {
-    align-items: center;
-  }
-
-  @media screen and (min-width: breakpoints.$tablet) and (orientation: landscape) {
-    flex-flow: row-reverse;
-    min-height: calc(100vh - var(--size-header-height));
-  }
-
-  &__primary {
-    @media screen and (min-width: breakpoints.$tablet) and (orientation: landscape) {
-      width: 60%;
-    }
-  }
-
-  &__secondary {
-    @media screen and (min-width: breakpoints.$tablet) and (orientation: landscape) {
-      width: 40%;
-    }
-  }
-}
-
-.text-container {
-  max-width: 34rem;
-}
