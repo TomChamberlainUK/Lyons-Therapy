@@ -1,6 +1,8 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 
+import { Container } from 'components/container/Container';
+
 import * as styles from './indexContainer.module.scss';
 
 export default function IndexContainer({ children }) {
@@ -28,16 +30,18 @@ export default function IndexContainer({ children }) {
         </div>
       </div>
       <div className={styles.textArea}>
-        <div className={styles.logoMobileWrapper}>
-          <StaticImage
-            src="../../images/logo-circular-accent.png"
-            alt="PLACEHOLDER IMAGE"
-            placeholder="blurred"
-            className={styles.logoMobile}
-            loading="eager"
-          />
-        </div>
-        {children}
+        <Container>
+          <div className={styles.logoMobileWrapper}>
+            <StaticImage
+              src="../../images/logo-circular-accent.png"
+              alt="PLACEHOLDER IMAGE"
+              placeholder="blurred"
+              className={styles.logoMobile}
+              loading="eager"
+            />
+          </div>
+          {children}
+        </Container>
       </div>
     </div>
   )

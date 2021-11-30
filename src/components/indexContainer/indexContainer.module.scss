@@ -21,14 +21,18 @@
 }
 
 .logo-desktop {
-  width: 128px;
+  width: 8rem;
 }
 
 .logo-mobile-wrapper {
   display: flex;
   justify-content: center;
-  margin-top: -64px;
+  margin-top: -5rem;
   width: 100%;
+
+  @media screen and (min-width: breakpoints.$tablet) {
+    margin-top: -7rem;
+  }
 
   @media screen and (min-width: breakpoints.$desktop), (orientation: landscape) {
     display: none;
@@ -36,7 +40,7 @@
 }
 
 .logo-mobile {
-  width: 128px;
+  width: 8rem;
 }
 
 .image-frame {
