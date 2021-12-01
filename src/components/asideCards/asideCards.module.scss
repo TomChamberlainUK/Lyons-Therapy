@@ -45,6 +45,7 @@
 
 .aside-cards {
   position: relative;
+  z-index: 5;
 
   &__controls {
     position: absolute;
