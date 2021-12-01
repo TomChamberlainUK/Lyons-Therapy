@@ -11,39 +11,43 @@ export function ParallaxContainer({ children, images = [] }) {
   const containerDescendants = gsap.utils.selector(containerRef);
 
   useEffect(() => {
+
+    // Get relevant DOM elements
     const container = containerRef.current;
     const imageFrame = containerDescendants('.gsap-parallax-image-frame');
     const imageFrameInner = containerDescendants('.gsap-parallax-image-frame-inner');
     const images = containerDescendants('.gsap-parallax-image');
     const sections = containerDescendants('.gsap-parallax-section-label');
 
+    // Handle errors
     if (!images.length) console.warn('No images provided for Parallax Container');
     if (sections.length < images.length - 1) console.warn('Not enough section labels provided for Parallax Container to reveal all images');
 
     // Pin image frame
-    gsap.to(imageFrame, {
+    const pinImageAnimation = gsap.to(imageFrame, {
       scrollTrigger: {
         trigger: container,
         pin: imageFrame,
         anticipatePin: 1,
         pinSpacing: false,
-        start: `top ${container.offsetTop}`,
+        start: () => `top ${container.offsetTop}`,
         end: 'bottom bottom'
       }
     });
 
     // Slowly scroll image on scrub/scroll
-    gsap.to(imageFrameInner, {
+    const scrubImageAnimation = gsap.to(imageFrameInner, {
       yPercent: -16.7, // with image height at 120% this allows the extra 20% to be scrolled
       scrollTrigger: {
         trigger: container,
-        scrub: true
+        scrub: true,
+        end: () => `bottom ${container.offsetTop}`
       }
     });
 
     // Fade images as user scrolls through sections
-    sections.forEach((section, i) => {
-      gsap.to(images[i], {
+    const Animation = sections.map((section, i) => {
+      return gsap.to(images[i], {
         opacity: 0,
         scrollTrigger: {
           trigger: section,
@@ -53,6 +57,13 @@ export function ParallaxContainer({ children, images = [] }) {
         }
       });
     });
+
+    // Cleanup gsap functions on unmount to prevent memory leaks
+    return () => {
+      pinImageAnimation.scrollTrigger.kill();
+      scrubImageAnimation.scrollTrigger.kill();
+      Animation.forEach(fadeImageAnimation => fadeImageAnimation.scrollTrigger.kill());
+    }
 
   }, [containerDescendants]);
 
