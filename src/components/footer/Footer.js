@@ -7,18 +7,36 @@ import * as styles from './footer.module.scss';
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.logo}>LYONS<br />THERAPY</div>
-      <StaticImage
-        src="../../images/bacp_badge_SAMPLE.jpg"
-        alt="SAMPLE BADGE"
-        objectFit="contain"
-        className={styles.bacpBadge}
-      />
-      <div className={styles.legalStrip}>
-        <span>&copy; Lyons Therapy</span>
-        <span>
-          <Link to="#" style={{color: 'rgba(255,255,255,1'}}>Privacy Policy</Link> <Link to="#" style={{color: 'rgba(255,255,255,1'}}>Terms of Use</Link> <Link to="#" style={{color: 'rgba(255,255,255,1'}}>Cookies</Link>
-        </span>
+      <div className={styles.footer__main}>
+        <div className={styles.logo}>LYONS<br />THERAPY</div>
+        <div className={`${styles.footer__textWrapper} ${styles.sitemap}`}>
+          <h1 className={styles.footer__heading}>Sitemap</h1>
+          <nav className={styles.footer__navigation}>
+            <Link to="/" className={styles.footer__link}>Home</Link>
+            <Link to="/about" className={styles.footer__link}>About</Link>
+            <Link to="/services" className={styles.footer__link}>Services</Link>
+            <Link to="/contact" className={styles.footer__link}>Contact</Link>
+            <Link to="/privacy-policy" className={styles.footer__link}>Privacy Policy</Link>
+          </nav>
+        </div>
+        <div className={`${styles.footer__textWrapper} ${styles.accreditation}`}>
+          <h1 className={styles.footer__heading}>Accreditation</h1>
+          <p className={styles.footer__paragraph}>Toby Lyons is a Registered Member of BACP and is a Registered Psychotherapist and Counsellor. Please see <Link to="#" className={styles.footer__link}>BACP</Link> for more details.</p>
+        </div>
+        <StaticImage
+          src="../../images/bacp_badge_SAMPLE.jpg"
+          alt="SAMPLE BADGE"
+          objectFit="contain"
+          className={styles.bacpBadge}
+        />
+      </div>
+      <div className={styles.footer__sub}>
+        <div className={styles.legalStrip}>
+          <p className={styles.footer__paragraph}>&copy; Lyons Therapy 2021</p>
+          <p className={styles.footer__paragraph}>
+            Website Developed by <Link to="http://tomchamberlain.co.uk" target="_blank" className={styles.footer__link}>Tom Chamberlain</Link>
+          </p>
+        </div>
       </div>
     </footer>
   )
