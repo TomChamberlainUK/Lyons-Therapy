@@ -8,12 +8,12 @@ import * as styles from './parallaxContainer.module.scss';
 export function ParallaxContainer({ children, images = [] }) {
 
   const containerRef = useRef(null);
-  const containerDescendants = gsap.utils.selector(containerRef);
 
   useEffect(() => {
 
     // Get relevant DOM elements
     const container = containerRef.current;
+    const containerDescendants = gsap.utils.selector(containerRef);
     const imageFrame = containerDescendants('.gsap-parallax-image-frame');
     const imageFrameInner = containerDescendants('.gsap-parallax-image-frame-inner');
     const images = containerDescendants('.gsap-parallax-image');
@@ -65,7 +65,7 @@ export function ParallaxContainer({ children, images = [] }) {
       Animation.forEach(fadeImageAnimation => fadeImageAnimation.scrollTrigger.kill());
     }
 
-  }, [containerDescendants]);
+  }, [containerRef]);
 
   return (
     <SplitContainer
