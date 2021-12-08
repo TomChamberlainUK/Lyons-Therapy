@@ -17,101 +17,105 @@ export default function TypographyTheme(theme) {
 
   return {
     TextWrapper: forwardRef(function TextWrapper({ children }, ref) {
-      return <div className={styles.textWrapper} ref={ref}>{children}</div>
+      return (
+        <div
+          ref={ref}
+          className={styles.textWrapper}
+        >
+          {children}
+        </div>
+      );
     }),
-    Title: forwardRef(function Title({ children }, ref) {
+    Title: forwardRef(function Title({ children, className }, ref) {
       return (
         <h1
           ref={ref}
-          className={styles.title}
+          className={`${styles.title} ${className && className}`}
         >
           {children}
         </h1>
       );
     }),
 
-    Subtitle: forwardRef(function Subtitle({ children }, ref) {
+    Subtitle: forwardRef(function Subtitle({ children, className }, ref) {
       return (
         <p
           ref={ref}
-          className={styles.subtitle}
+          className={`${styles.subtitle} ${className && className}`}
         >
           {children}
         </p>
       );
     }),
 
-    Heading: forwardRef(function Heading({ children }, ref) {
+    Heading: forwardRef(function Heading({ children, className }, ref) {
       return (
         <h2
           ref={ref}
-          className={styles.heading}
+          className={`${styles.heading} ${className && className}`}
         >
           {children}
         </h2>
       );
     }),
     
-    Subheading: forwardRef(function Subheading({ children }, ref) {
+    Subheading: forwardRef(function Subheading({ children, className }, ref) {
       return (
         <h3
           ref={ref}
-          className={styles.subheading}
+          className={`${styles.subheading} ${className && className}`}
         >
           {children}
         </h3>
       );
     }),
     
-    Paragraph: forwardRef(function Paragraph({ children }, ref) {
+    Paragraph: forwardRef(function Paragraph({ children, className }, ref) {
       return (
         <p
           ref={ref}
-          className={styles.paragraph}
+          className={`${styles.paragraph} ${className && className}`}
         >
           {children}
         </p>
       );
     }),
     
-    Note: forwardRef(function Note({ children }, ref) {
+    Note: forwardRef(function Note({ children, className }, ref) {
       return (
         <p ref={ref} >
-          <small className={styles.note} >
+          <small className={`${styles.note} ${className && className}`}>
             {children}
           </small>
         </p>
       );
     }),
     
-    Seperator: forwardRef(function Seperator({ isBold }, ref) {
+    Seperator: function Seperator({ isBold }) {
       return (
-        <hr
-          ref={ref}
-          className={`
-            ${styles.seperator}
-            ${isBold && styles.seperatorIsBold}
-          `}
-        />
+        <hr className={`
+          ${styles.seperator}
+          ${isBold && styles.seperatorIsBold}
+        `} />
       );
-    }),
+    },
     
-    List: forwardRef(function List({ children }, ref) {
+    List: forwardRef(function List({ children, className }, ref) {
       return (
         <ul
           ref={ref}
-          className={styles.list}
+          className={`${styles.list} ${className && className}`}
         >
           {children}
         </ul>
       );
     }),
     
-    ListItem: forwardRef(function ListItem({ children }, ref) {
+    ListItem: forwardRef(function ListItem({ children, className }, ref) {
       return (
         <li
           ref={ref}
-          className={styles.list__item}
+          className={`${styles.list__item} ${className && className}`}
         >
           {children}
         </li>
