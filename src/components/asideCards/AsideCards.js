@@ -17,81 +17,90 @@ const cardContents = [
   {
     color: 'primary',
     icon: <StaticImage
-      src="../../images/icon-heads.jpg"
+      src="../../images/icon-heads.svg"
       alt="PLACEHOLDER"
       className={styles.cardIcon}
+      placeholder="none"
     />,
     text: 'We understand our existence as individuals within and through our relationships with others.'
   },
   {
     color: 'accent',
     icon: <StaticImage
-      src="../../images/icon-particles.jpg"
+      src="../../images/icon-particles.svg"
       alt="PLACEHOLDER"
       className={styles.cardIcon}
+      placeholder="none"
     />,
     text: 'Everyone\'s life is unique. There are as many ways to suffer as there are to heal.'
   },
   {
     color: 'secondary',
     icon: <StaticImage
-      src="../../images/icon-star.jpg"
+      src="../../images/icon-star.svg"
       alt="PLACEHOLDER"
       className={styles.cardIcon}
+      placeholder="none"
     />,
     text: 'How can we know how someone else experiences the world without hearing it from them first?'
   },
   {
     color: 'dark',
     icon: <StaticImage
-      src="../../images/icon-stairs.jpg"
+      src="../../images/icon-stairs.svg"
       alt="PLACEHOLDER"
       className={styles.cardIcon}
+      placeholder="none"
     />,
     text: 'We all struggle at times with the ultimate concerns of life and death.'
   },
   {
     color: 'primary',
     icon: <StaticImage
-      src="../../images/icon-speech.jpg"
+      src="../../images/icon-speech.svg"
       alt="PLACEHOLDER"
       className={styles.cardIcon}
+      placeholder="none"
     />,
     text: 'Positive therapeutic relationships are built on a foundation of empathy and trust.'
   },
   {
     color: 'accent',
     icon: <StaticImage
-      src="../../images/icon-waves.jpg"
+      src="../../images/icon-waves.svg"
       alt="PLACEHOLDER"
       className={styles.cardIcon}
+      placeholder="none"
     />,
     text: 'It\'s important to normalise and accept distress in a world which often tries to diagnose and medicalise human suffering'
   },
   {
     color: 'secondary',
     icon: <StaticImage
-      src="../../images/icon-orbit.jpg"
+      src="../../images/icon-orbit.svg"
       alt="PLACEHOLDER"
       className={styles.cardIcon}
+      placeholder="none"
     />,
     text: 'Our mental health is intrinsically linked to our physical health, our relational world, our history and our beliefs.'
   },
   {
     color: 'dark',
     icon: <StaticImage
-      src="../../images/icon-growth.jpg"
+      src="../../images/icon-growth.svg"
       alt="PLACEHOLDER"
       className={styles.cardIcon}
+      placeholder="none"
     />,
     text: 'With obstacles removed, each of us have a propensity to move towards healing, change and growth.'
   },
   {
-    color: 'dark',
+    color: 'primary',
     icon: <StaticImage
-      src="../../images/icon-sunset.jpg"
+      src="../../images/icon-sunset.svg"
       alt="PLACEHOLDER"
       className={styles.cardIcon}
+      placeholder="none"
     />,
     text: 'By facing our struggles rather than trying to avoid or eliminate them, we can move forwards with our lives.'
   }

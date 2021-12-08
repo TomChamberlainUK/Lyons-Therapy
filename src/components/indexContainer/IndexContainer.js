@@ -24,7 +24,7 @@ export function IndexContainer({ children }) {
           </div>
           <div className={styles.logoDesktopWrapper}>
             <StaticImage
-              src="../../images/logo-circular-accent.png"
+              src="../../images/logo.svg"
               alt="PLACEHOLDER IMAGE"
               placeholder="blurred"
               className={styles.logoDesktop}
@@ -37,7 +37,7 @@ export function IndexContainer({ children }) {
       <Container>
         <div className={styles.logoMobileWrapper}>
           <StaticImage
-            src="../../images/logo-circular-accent.png"
+            src="../../images/logo.svg"
             alt="PLACEHOLDER IMAGE"
             placeholder="blurred"
             className={styles.logoMobile}
