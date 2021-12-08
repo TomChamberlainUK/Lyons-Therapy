@@ -10,19 +10,16 @@ import { Button } from 'components/button/Button';
 
 function IndexPage() {
 
-  const textRefs = useRef([]);
-
-  // Better than pushing to textRef array? needs research
-  let textRefCount = 0;
-  function getNextTextRefIndex() {
-    textRefCount++;
-    return textRefCount - 1;
-  }
+  const textWrapperRef = useRef();
+  const textWrapperDescendants = gsap.utils.selector(textWrapperRef);
 
   useEffect(() => {
+    
+    const scrollInElements = textWrapperDescendants('.gsap-scroll-in');
 
-    gsap.set(textRefs.current, { opacity: 0, y: 16 });
-    ScrollTrigger.batch(textRefs.current, {
+    gsap.set(scrollInElements, { opacity: 0, y: 16 });
+
+    const triggers = ScrollTrigger.batch(scrollInElements, {
       interval: 0.1,
       batchMax: 5,
       onEnter: batch => gsap.to(batch, {
@@ -49,19 +46,19 @@ function IndexPage() {
       })
     });
 
-    ScrollTrigger.addEventListener("refreshInit", () => gsap.set(textRefs.current, { y: 0 }));
+    return () => triggers.forEach(trigger => trigger.kill());
 
-  }, [textRefs]);
+  }, [textWrapperDescendants]);
 
   return (
     <Layout pageTitle="Home">
       <IndexContainer>
-          <TextWrapper>
-            <Title ref={ref => textRefs.current[getNextTextRefIndex()] = ref} >Toby Lyons</Title>
-            <Subtitle ref={ref => textRefs.current[getNextTextRefIndex()] = ref} >BA, PG Cert, PG Dip, MBACP</Subtitle>
+          <TextWrapper ref={textWrapperRef}>
+            <Title className={'gsap-scroll-in'} >Toby Lyons</Title>
+            <Subtitle className={'gsap-scroll-in'} >BA, PG Cert, PG Dip, MBACP</Subtitle>
             <Seperator isBold={true} />
-            <Heading ref={ref => textRefs.current[getNextTextRefIndex()] = ref} >Counselling and Psychotherapy</Heading>
-            <Paragraph ref={ref => textRefs.current[getNextTextRefIndex()] = ref} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel libero nisi. Sed euismod mattis gravida.</Paragraph>
+            <Heading className={'gsap-scroll-in'} >Counselling and Psychotherapy</Heading>
+            <Paragraph className={'gsap-scroll-in'} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel libero nisi. Sed euismod mattis gravida.</Paragraph>
             <Seperator />
             <Button
               onClick={() => navigate('/contact')}
