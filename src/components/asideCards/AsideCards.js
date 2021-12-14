@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
 
 import Card from 'components/card/Card';
+
+import iconURLs from './iconURLs.js';
 
 import * as styles from './asideCards.module.scss';
 
@@ -16,92 +17,56 @@ import * as styles from './asideCards.module.scss';
 const cardContents = [
   {
     color: 'primary',
-    icon: <StaticImage
-      src="../../images/icon-heads.svg"
-      alt="PLACEHOLDER"
-      className={styles.cardIcon}
-      placeholder="none"
-    />,
+    iconURL: iconURLs.heads,
+    // iconAlt: 'PLACEHOLDER',
     text: 'We understand our existence as individuals within and through our relationships with others.'
   },
   {
     color: 'accent',
-    icon: <StaticImage
-      src="../../images/icon-particles.svg"
-      alt="PLACEHOLDER"
-      className={styles.cardIcon}
-      placeholder="none"
-    />,
+    iconURL: iconURLs.particles,
+    // iconAlt: 'PLACEHOLDER',
     text: 'Everyone\'s life is unique. There are as many ways to suffer as there are to heal.'
   },
   {
     color: 'secondary',
-    icon: <StaticImage
-      src="../../images/icon-star.svg"
-      alt="PLACEHOLDER"
-      className={styles.cardIcon}
-      placeholder="none"
-    />,
+    iconURL: iconURLs.star,
+    // iconAlt: 'PLACEHOLDER',
     text: 'How can we know how someone else experiences the world without hearing it from them first?'
   },
   {
     color: 'dark',
-    icon: <StaticImage
-      src="../../images/icon-stairs.svg"
-      alt="PLACEHOLDER"
-      className={styles.cardIcon}
-      placeholder="none"
-    />,
+    iconURL: iconURLs.stairs,
+    // iconAlt: 'PLACEHOLDER',
     text: 'We all struggle at times with the ultimate concerns of life and death.'
   },
   {
     color: 'primary',
-    icon: <StaticImage
-      src="../../images/icon-speech.svg"
-      alt="PLACEHOLDER"
-      className={styles.cardIcon}
-      placeholder="none"
-    />,
+    iconURL: iconURLs.speech,
+    // iconAlt: 'PLACEHOLDER',
     text: 'Positive therapeutic relationships are built on a foundation of empathy and trust.'
   },
   {
     color: 'accent',
-    icon: <StaticImage
-      src="../../images/icon-waves.svg"
-      alt="PLACEHOLDER"
-      className={styles.cardIcon}
-      placeholder="none"
-    />,
+    iconURL: iconURLs.waves,
+    // iconAlt: 'PLACEHOLDER',
     text: 'It\'s important to normalise and accept distress in a world which often tries to diagnose and medicalise human suffering'
   },
   {
     color: 'secondary',
-    icon: <StaticImage
-      src="../../images/icon-orbit.svg"
-      alt="PLACEHOLDER"
-      className={styles.cardIcon}
-      placeholder="none"
-    />,
+    iconURL: iconURLs.orbit,
+    // iconAlt: 'PLACEHOLDER',
     text: 'Our mental health is intrinsically linked to our physical health, our relational world, our history and our beliefs.'
   },
   {
     color: 'dark',
-    icon: <StaticImage
-      src="../../images/icon-growth.svg"
-      alt="PLACEHOLDER"
-      className={styles.cardIcon}
-      placeholder="none"
-    />,
+    iconURL: iconURLs.growth,
+    // iconAlt: 'PLACEHOLDER',
     text: 'With obstacles removed, each of us have a propensity to move towards healing, change and growth.'
   },
   {
     color: 'primary',
-    icon: <StaticImage
-      src="../../images/icon-sunset.svg"
-      alt="PLACEHOLDER"
-      className={styles.cardIcon}
-      placeholder="none"
-    />,
+    iconURL: iconURLs.sunset,
+    // iconAlt: 'PLACEHOLDER',
     text: 'By facing our struggles rather than trying to avoid or eliminate them, we can move forwards with our lives.'
   }
 ];
@@ -157,11 +122,12 @@ export default function AsideCards() {
   ];
 
   // Generate card components from data
-  const cards = cardContents.map(({color, icon, text}, i) => {
+  const cards = cardContents.map(({color, iconURL, iconAlt, text}, i) => {
     return (
       <Card
         color={color}
-        icon={icon}
+        iconURL={iconURL}
+        iconAlt={iconAlt}
         key={i}
         ref={ref => cardRefs.current[i] = ref}
       >

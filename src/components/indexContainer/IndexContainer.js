@@ -4,6 +4,8 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { SplitContainer } from 'components/splitContainer/SplitContainer';
 import { Container } from 'components/container/Container';
 
+import logoUrl from 'images/logo-circle.svg';
+
 import * as styles from './indexContainer.module.scss';
 
 export function IndexContainer({ children }) {
@@ -22,28 +24,20 @@ export function IndexContainer({ children }) {
               loading="eager"
             />
           </div>
-          <div className={styles.logoDesktopWrapper}>
-            <StaticImage
-              src="../../images/logo.svg"
-              alt="PLACEHOLDER IMAGE"
-              placeholder="blurred"
-              className={styles.logoDesktop}
-              loading="eager"
-            />
-          </div>
+          <img
+            src={logoUrl}
+            alt="Lyons Therapy Logo"
+            className={styles.logoDesktop}
+          />
         </div>
       }
     >
       <Container>
-        <div className={styles.logoMobileWrapper}>
-          <StaticImage
-            src="../../images/logo.svg"
-            alt="PLACEHOLDER IMAGE"
-            placeholder="blurred"
-            className={styles.logoMobile}
-            loading="eager"
-          />
-        </div>
+        <img
+          src={logoUrl}
+          alt="Lyons Therapy Logo"
+          className={styles.logoMobile}
+        />
         {children}
       </Container>
     </SplitContainer>

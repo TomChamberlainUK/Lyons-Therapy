@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 
 import * as styles from './card.module.scss';
 
-export default forwardRef(function Card({ children, color, icon }, ref) {
+export default forwardRef(function Card({ children, color, iconURL, iconAlt }, ref) {
 
   const cardClasses = `
     ${styles.card}
@@ -26,7 +26,11 @@ export default forwardRef(function Card({ children, color, icon }, ref) {
     >
       <div className={cardClasses}>
         <div className={cardHeaderClasses}>
-          {icon}
+          <img
+            src={iconURL}
+            alt={iconAlt}
+            className={styles.card__icon}
+          />
         </div>
         <div className={styles.card__body}>
           {children}
