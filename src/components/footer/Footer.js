@@ -30,7 +30,7 @@ function Footer() {
           <p className={styles.footer__paragraph}>Toby Lyons is a Registered Member of BACP and is a Registered Psychotherapist and Counsellor. Please see <Link to="#" className={styles.footer__link}>BACP</Link> for more details.</p>
         </div>
         <StaticImage
-          src="../../images/bacp_badge_SAMPLE.jpg"
+          src="../../images/bacp_badge.png"
           alt="SAMPLE BADGE"
           objectFit="contain"
           className={styles.bacpBadge}
