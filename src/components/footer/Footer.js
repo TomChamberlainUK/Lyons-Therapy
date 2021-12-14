@@ -2,13 +2,19 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
+import logoURL from 'images/logo-circle-white.svg';
+
 import * as styles from './footer.module.scss';
 
 function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__main}>
-        <div className={styles.logo}>LYONS<br />THERAPY</div>
+        <img
+          src={logoURL}
+          alt="Lyons Therapy Logo"
+          className={styles.logo}
+        />
         <div className={`${styles.footer__textWrapper} ${styles.sitemap}`}>
           <h1 className={styles.footer__heading}>Sitemap</h1>
           <nav className={styles.footer__navigation}>
