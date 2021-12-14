@@ -40,7 +40,7 @@ function Footer() {
         <div className={styles.legalStrip}>
           <p className={styles.footer__paragraph}>&copy; Lyons Therapy 2021</p>
           <p className={styles.footer__paragraph}>
-            Website Developed by <Link to="http://tomchamberlain.co.uk" target="_blank" className={styles.footer__link}>Tom Chamberlain</Link>
+            Website Developed by <a href="http://tomchamberlain.co.uk" target="_blank" rel="noreferrer" className={styles.footer__link}>Tom Chamberlain</a>
           </p>
         </div>
       </div>
