@@ -8,7 +8,7 @@ import * as styles from './footer.module.scss';
 
 function Footer() {
   return (
-    <footer className={styles.footer}>
+    <footer>
       <div className={styles.footer__main}>
         <img
           src={logoURL}
