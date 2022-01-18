@@ -5,6 +5,7 @@
 @mixin title($color: black) {
   color: $color;
   font: {
+    family: 'Helvetica Neue', 'montserrat', sans-serif;
     size: 2rem;
     weight: 700;
   }
@@ -14,6 +15,7 @@
 @mixin subtitle($color: black) {
   color: $color;
   font: {
+    family: 'Helvetica Neue', 'hind-madurai', sans-serif;
     size: 1rem;
     weight: 400;
   }
@@ -23,6 +25,7 @@
 @mixin heading($color: black) {
   color: $color;
   font: {
+    family: 'Helvetica Neue', 'montserrat', sans-serif;
     size: 1.5rem;
     weight: 700;
   }
@@ -33,6 +36,7 @@
 @mixin subheading($color: black) {
   color: $color;
   font: {
+    family: 'Helvetica Neue', 'montserrat', sans-serif;
     size: 1.17rem;
     weight: 700;
   }
@@ -42,6 +46,7 @@
 @mixin paragraph($color: black) {
   color: $color;
   font: {
+    family: 'Helvetica Neue', 'hind-madurai', sans-serif;
     size: 1rem;
     weight: 400;
   }
@@ -52,6 +57,7 @@
 @mixin note($color: black) {
   color: $color;
   font: {
+    family: 'Helvetica Neue', 'hind-madurai', sans-serif;
     size: 0.8rem;
     weight: 400;
   }

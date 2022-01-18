@@ -3,6 +3,8 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import "@fontsource/material-icons";
 import "@fontsource/libre-baskerville";
+import '@fontsource/montserrat/700.css';
+import '@fontsource/hind-madurai';
 
 import Header from 'components/header/Header';
 import Footer from 'components/footer/Footer';

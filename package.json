@@ -15,8 +15,10 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@fontsource/hind-madurai": "^4.5.0",
     "@fontsource/libre-baskerville": "^4.5.0",
     "@fontsource/material-icons": "^4.4.2",
+    "@fontsource/montserrat": "^4.5.2",
     "gatsby": "^4.5.2",
     "gatsby-plugin-gatsby-cloud": "^4.5.1",
     "gatsby-plugin-image": "^2.5.1",
