@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Layout from 'components/layout/Layout';
 import SplitContainer from 'components/splitContainer/SplitContainer';
 import Container from 'components/container/Container';
-import { TextWrapper, Title, Subtitle, Heading, Paragraph, List, ListItem, Note, Seperator } from 'components/typography/Typography';
+import { TextWrapper, Title, Subtitle, Heading, Subheading, Paragraph, List, ListItem, Note, Seperator } from 'components/typography/Typography';
 import { Form, Input } from 'components/form/Form';
 import { Button } from 'components/button/Button';
 
@@ -114,9 +114,15 @@ function ContactPage() {
               Pricing and contact information
             </Subtitle>
             <Seperator isBold={true} />
-            <Heading className={'gsap-scroll-in'} >
-              Pricing
+            <Heading>
+              How to get in touch
             </Heading>
+            <Paragraph>
+              To book in a session or your free consultation, send over an email via the online form or directly to toby@lyonstherapy.co.uk. I aim to get back to enquiries within 48 hours.
+            </Paragraph>
+            <Subheading className={'gsap-scroll-in'} >
+              Pricing
+            </Subheading>
             <List className={'gsap-scroll-in'} >
               <ListItem>Remote work/Zoom Sessions: £45</ListItem>
               <ListItem>Face to Face Sessions: £50</ListItem>
@@ -125,15 +131,10 @@ function ContactPage() {
             <Paragraph className={'gsap-scroll-in'} >
               It’s important that we feel as though we can work well together and that you know what to expect in our sessions. Therefore I offer a free 20-minute Zoom session where we can meet each other, discuss some details and I can answer any questions you might have.
             </Paragraph>
-            <Paragraph>
+            <Seperator />
+            <Note>
               I offer a small number of concession rate slots for students and those with a low-household income, for further information please enquire.
-            </Paragraph>
-            <Heading>
-              How to get in touch
-            </Heading>
-            <Paragraph>
-              To book in a session or your free consultation then send over an email via the online form or directly to toby@lyonstherapy.co.uk. I aim to get back to enquiries within 48 hours.
-            </Paragraph>
+            </Note>
           </TextWrapper>
         </Container>
       </SplitContainer>

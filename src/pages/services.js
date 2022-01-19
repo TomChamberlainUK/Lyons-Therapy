@@ -103,9 +103,6 @@ function ServicesPage() {
               I have experience writing, editing, and presenting Mental Health &amp; Wellbeing Presentations.
             </Paragraph>
             <Paragraph className={'gsap-scroll-in'} >
-              I have experience writing, editing, and presenting Mental Health &amp; Wellbeing Presentations.
-            </Paragraph>
-            <Paragraph className={'gsap-scroll-in'} >
               I am not a wellbeing fluffer or mindset coach kind of guy (not that there aren’t some good folks in those fields). I’m a dedicated and passionate believer in helping you and your team to integrate real, positive, and meaningful changes into your personal and professional lives. So, whatever that looks like, training up a staff member with bespoke courses and materials, or inviting me in to give a presentation, get in touch to discuss.
             </Paragraph>
           </TextWrapper>

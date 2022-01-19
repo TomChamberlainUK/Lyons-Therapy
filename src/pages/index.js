@@ -65,16 +65,10 @@ function IndexPage() {
               Counselling and Psychotherapy
             </Heading>
             <Paragraph className={'gsap-scroll-in'} >
-              Hello there – Welcome.
-            </Paragraph>
-            <Paragraph className={'gsap-scroll-in'} >
-              I’m Toby, thanks for popping by.
+              Hello there – Welcome. I’m Toby, thanks for popping by.
             </Paragraph>
             <Paragraph className={'gsap-scroll-in'} >
               Every person who reaches this page will have a different reason for doing so. Whatever that reason is for you, have a look through the site to find out more about how I practise and if you think you’d like to work with me.
-            </Paragraph>
-            <Paragraph className={'gsap-scroll-in'} >
-              Toby
             </Paragraph>
             <Seperator />
             <Button
