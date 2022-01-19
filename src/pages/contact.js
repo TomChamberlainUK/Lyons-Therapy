@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Layout from 'components/layout/Layout';
 import SplitContainer from 'components/splitContainer/SplitContainer';
 import Container from 'components/container/Container';
-import { TextWrapper, Title, Subtitle, Heading, Paragraph, Note, Seperator } from 'components/typography/Typography';
+import { TextWrapper, Title, Subtitle, Heading, Paragraph, List, ListItem, Note, Seperator } from 'components/typography/Typography';
 import { Form, Input } from 'components/form/Form';
 import { Button } from 'components/button/Button';
 
@@ -107,11 +107,33 @@ function ContactPage() {
       }>
         <Container>
           <TextWrapper ref={textWrapperRef}>
-            <Title className={'gsap-scroll-in'} >Contact</Title>
-            <Subtitle className={'gsap-scroll-in'} >There's going to be a form</Subtitle>
+            <Title className={'gsap-scroll-in'} >
+              Contact
+            </Title>
+            <Subtitle className={'gsap-scroll-in'} >
+              Pricing and contact information
+            </Subtitle>
             <Seperator isBold={true} />
-            <Heading className={'gsap-scroll-in'} >Heading</Heading>
-            <Paragraph className={'gsap-scroll-in'} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel libero nisi. Sed euismod mattis gravida. In pulvinar, metus id tincidunt aliquam, mauris sapien consequat turpis, id malesuada sem lorem non ligula. Vestibulum dignissim metus nec justo dignissim, egestas suscipit orci tempus. Nunc a dolor urna. Fusce vel metus eget sapien feugiat consectetur sed molestie diam. Maecenas nisl metus, tempus commodo ullamcorper eget, porttitor sed metus. Nulla a arcu eu augue porta tincidunt nec ut felis.</Paragraph>
+            <Heading className={'gsap-scroll-in'} >
+              Pricing
+            </Heading>
+            <List className={'gsap-scroll-in'} >
+              <ListItem>Remote work/Zoom Sessions: £45</ListItem>
+              <ListItem>Face to Face Sessions: £50</ListItem>
+              <ListItem>20 Minute introductory session: Free</ListItem>
+            </List>
+            <Paragraph className={'gsap-scroll-in'} >
+              It’s important that we feel as though we can work well together and that you know what to expect in our sessions. Therefore I offer a free 20-minute Zoom session where we can meet each other, discuss some details and I can answer any questions you might have.
+            </Paragraph>
+            <Paragraph>
+              I offer a small number of concession rate slots for students and those with a low-household income, for further information please enquire.
+            </Paragraph>
+            <Heading>
+              How to get in touch
+            </Heading>
+            <Paragraph>
+              To book in a session or your free consultation then send over an email via the online form or directly to toby@lyonstherapy.co.uk. I aim to get back to enquiries within 48 hours.
+            </Paragraph>
           </TextWrapper>
         </Container>
       </SplitContainer>

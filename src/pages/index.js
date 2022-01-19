@@ -54,11 +54,28 @@ function IndexPage() {
     <Layout pageTitle="Home">
       <IndexContainer>
           <TextWrapper ref={textWrapperRef}>
-            <Title className={'gsap-scroll-in'} >Toby Lyons</Title>
-            <Subtitle className={'gsap-scroll-in'} >BA, PG Cert, PG Dip, MBACP</Subtitle>
+            <Title className={'gsap-scroll-in'} >
+              Toby Lyons
+            </Title>
+            <Subtitle className={'gsap-scroll-in'} >
+              BA, PG Cert, PG Dip, MBACP
+            </Subtitle>
             <Seperator isBold={true} />
-            <Heading className={'gsap-scroll-in'} >Counselling and Psychotherapy</Heading>
-            <Paragraph className={'gsap-scroll-in'} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel libero nisi. Sed euismod mattis gravida.</Paragraph>
+            <Heading className={'gsap-scroll-in'} >
+              Counselling and Psychotherapy
+            </Heading>
+            <Paragraph className={'gsap-scroll-in'} >
+              Hello there – Welcome.
+            </Paragraph>
+            <Paragraph className={'gsap-scroll-in'} >
+              I’m Toby, thanks for popping by.
+            </Paragraph>
+            <Paragraph className={'gsap-scroll-in'} >
+              Every person who reaches this page will have a different reason for doing so. Whatever that reason is for you, have a look through the site to find out more about how I practise and if you think you’d like to work with me.
+            </Paragraph>
+            <Paragraph className={'gsap-scroll-in'} >
+              Toby
+            </Paragraph>
             <Seperator />
             <Button
               onClick={() => navigate('/contact')}

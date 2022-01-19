@@ -76,33 +76,80 @@ function AboutPage() {
       >
         <Container>
           <TextWrapper ref={textWrapperRef}>
-            <Title className={'gsap-scroll-in'} >One Big Title</Title>
-            <Subtitle className={'gsap-scroll-in'} >And a subtitle to go along with it</Subtitle>
+            <Title className={'gsap-scroll-in'} >
+              About
+            </Title>
+            <Subtitle className={'gsap-scroll-in'} >
+              An overview of what this therapy stuff is all about, and how I work.
+            </Subtitle>
             <Seperator isBold={true}/>
-            <Heading className={'gsap-scroll-in'} >Heading</Heading>
-            <Paragraph className={'gsap-scroll-in'} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel libero nisi. Sed euismod mattis gravida. In pulvinar, metus id tincidunt aliquam, mauris sapien consequat turpis, id malesuada sem lorem non ligula. Vestibulum dignissim metus nec justo dignissim, egestas suscipit orci tempus. Nunc a dolor urna. Fusce vel metus eget sapien feugiat consectetur sed molestie diam. Maecenas nisl metus, tempus commodo ullamcorper eget, porttitor sed metus. Nulla a arcu eu augue porta tincidunt nec ut felis.</Paragraph>
-            <Paragraph className={'gsap-scroll-in'} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel libero nisi. Sed euismod mattis gravida. In pulvinar, metus id tincidunt aliquam, mauris sapien consequat turpis, id malesuada sem lorem non ligula. Vestibulum dignissim metus nec justo dignissim, egestas suscipit orci tempus. Nunc a dolor urna. Fusce vel metus eget sapien feugiat consectetur sed molestie diam. Maecenas nisl metus, tempus commodo ullamcorper eget, porttitor sed metus. Nulla a arcu eu augue porta tincidunt nec ut felis.</Paragraph>
-            <Subheading className={'gsap-scroll-in'} >Subheading</Subheading>
-            <List className={'gsap-scroll-in'} >
-              <ListItem>This is a bullet-point</ListItem>
-              <ListItem>This is a bullet-point</ListItem>
-              <ListItem>This is a bullet-point</ListItem>
-              <ListItem>This is a bullet-point</ListItem>
-            </List>
+            <Heading className={'gsap-scroll-in'} >
+              Why Therapy?
+            </Heading>
+            <Paragraph className={'gsap-scroll-in'} >
+              There are many different reasons why you might be thinking about starting therapy. You might be feeling out of sorts, out of sync or not quite yourself. You might need support as you move through a difficult phase or transition in your life or you may recognise the need to explore and process some parts of your past.
+            </Paragraph>
+            <Paragraph>
+              From anxiety or depression to stress management and relationship difficulties therapy has the potential to help everyone differently.
+            </Paragraph>
+            <Subheading className={'gsap-scroll-in'} >
+              Does it work?
+            </Subheading>
+            <Paragraph className={'gsap-scroll-in'} >
+              I wholeheartedly believe in the transformative and healing power of therapy because I’ve seen it happen with my clients, and experienced it myself. I’m of the belief that it needn’t be just for those that are experiencing hard times. From developing a greater understanding of how we function in relationships (familial, professional, or romantic), to examining and challenging an internal critical voice, we can always benefit from a little self-exploration no matter how good or bad we feel at present.
+            </Paragraph>
+            <Subheading className={'gsap-scroll-in'} >
+              Relational-Integrative Therapy
+            </Subheading>
+            <Paragraph className={'gsap-scroll-in'} >
+              The unique nature of each client’s needs is reflected in my mode of practice. I am a Relational-Integrative Psychotherapist. Relational doesn’t mean I’m solely focused on your current relationships, it defines a mode of practice that considers how we each exist in, are developed through, and can experience difficulties in our lives because of our relationships (past & present). It also examines and works with how we relate to one another in our therapy sessions. The integrative part in my practice means that we will create a unique therapeutic approach together, drawing on different techniques and theories to fit your personality, goals and desires.
+            </Paragraph>
             <Seperator />
             <ParallaxContainer.SectionLabel />
-            <Heading className={'gsap-scroll-in'} >Heading</Heading>
-            <Paragraph className={'gsap-scroll-in'} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel libero nisi. Sed euismod mattis gravida. In pulvinar, metus id tincidunt aliquam, mauris sapien consequat turpis, id malesuada sem lorem non ligula. Vestibulum dignissim metus nec justo dignissim, egestas suscipit orci tempus. Nunc a dolor urna. Fusce vel metus eget sapien feugiat consectetur sed molestie diam. Maecenas nisl metus, tempus commodo ullamcorper eget, porttitor sed metus. Nulla a arcu eu augue porta tincidunt nec ut felis.</Paragraph>
-            <Paragraph className={'gsap-scroll-in'} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel libero nisi. Sed euismod mattis gravida. In pulvinar, metus id tincidunt aliquam, mauris sapien consequat turpis, id malesuada sem lorem non ligula. Vestibulum dignissim metus nec justo dignissim, egestas suscipit orci tempus. Nunc a dolor urna. Fusce vel metus eget sapien feugiat consectetur sed molestie diam. Maecenas nisl metus, tempus commodo ullamcorper eget, porttitor sed metus. Nulla a arcu eu augue porta tincidunt nec ut felis.</Paragraph>
-            <Paragraph className={'gsap-scroll-in'} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel libero nisi. Sed euismod mattis gravida. In pulvinar, metus id tincidunt aliquam, mauris sapien consequat turpis, id malesuada sem lorem non ligula. Vestibulum dignissim metus nec justo dignissim, egestas suscipit orci tempus. Nunc a dolor urna. Fusce vel metus eget sapien feugiat consectetur sed molestie diam. Maecenas nisl metus, tempus commodo ullamcorper eget, porttitor sed metus. Nulla a arcu eu augue porta tincidunt nec ut felis.</Paragraph>
+            <Heading className={'gsap-scroll-in'} >
+              How I work
+            </Heading>
+            <Paragraph className={'gsap-scroll-in'} >
+              I consider myself to be an active participant in a therapy session, meaning I am not just a silent “mhm”-er. To get the most out of our sessions I find it’s important to engage with your world and whatever has brought you to therapy at a pace with which you feel comfortable.
+            </Paragraph>
+            <Paragraph>
+              All my work is conducted discreetly and in the strictest confidence, the boundaries of this confidence and all the other details of how the sessions will work are discussed clearly and agreed upon prior to getting started.
+            </Paragraph>
+            <Subheading className={'gsap-scroll-in'} >
+              What I do
+            </Subheading>
+            <Paragraph className={'gsap-scroll-in'} >
+              I pride myself on my ability to create a safe and judgement-free space with each of my clients. Together we can build a therapeutic relationship built on warmth, genuine care, and trust. These foundations are essential for the discoveries and challenges that can be part of the therapeutic process as we move towards growth, empowerment, or healing.
+            </Paragraph>
+            <Paragraph>
+              I’m a therapist who cares deeply about his work. It’s very important to me that my clients get the most out of their therapeutic experience - that they feel truly heard and supported throughout our time together.
+            </Paragraph>
+            <Subheading>
+              Counselling vs Psychotherapy?
+            </Subheading>
+            <Paragraph className={'gsap-scroll-in'} >
+              Some practitioners call themselves Counsellors, some call themselves Psychotherapists. Though I’m qualified as both – I call myself a therapist to meet in the middle.
+            </Paragraph>
             <Seperator />
             <ParallaxContainer.SectionLabel />
-            <Heading className={'gsap-scroll-in'} >Heading</Heading>
-            <Paragraph className={'gsap-scroll-in'} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel libero nisi. Sed euismod mattis gravida. In pulvinar, metus id tincidunt aliquam, mauris sapien consequat turpis, id malesuada sem lorem non ligula. Vestibulum dignissim metus nec justo dignissim, egestas suscipit orci tempus. Nunc a dolor urna. Fusce vel metus eget sapien feugiat consectetur sed molestie diam. Maecenas nisl metus, tempus commodo ullamcorper eget, porttitor sed metus. Nulla a arcu eu augue porta tincidunt nec ut felis.</Paragraph>
-            <Paragraph className={'gsap-scroll-in'} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel libero nisi. Sed euismod mattis gravida. In pulvinar, metus id tincidunt aliquam, mauris sapien consequat turpis, id malesuada sem lorem non ligula. Vestibulum dignissim metus nec justo dignissim, egestas suscipit orci tempus. Nunc a dolor urna. Fusce vel metus eget sapien feugiat consectetur sed molestie diam. Maecenas nisl metus, tempus commodo ullamcorper eget, porttitor sed metus. Nulla a arcu eu augue porta tincidunt nec ut felis.</Paragraph>
-            <Paragraph className={'gsap-scroll-in'} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel libero nisi. Sed euismod mattis gravida. In pulvinar, metus id tincidunt aliquam, mauris sapien consequat turpis, id malesuada sem lorem non ligula. Vestibulum dignissim metus nec justo dignissim, egestas suscipit orci tempus. Nunc a dolor urna. Fusce vel metus eget sapien feugiat consectetur sed molestie diam. Maecenas nisl metus, tempus commodo ullamcorper eget, porttitor sed metus. Nulla a arcu eu augue porta tincidunt nec ut felis.</Paragraph>
-            <Seperator />
-            <Note className={'gsap-scroll-in'} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel libero nisi. Sed euismod mattis gravida. In pulvinar, metus id tincidunt aliquam, mauris sapien consequat turpis, id malesuada sem lorem non ligula. Vestibulum dignissim metus nec justo dignissim, egestas suscipit orci tempus. Nunc a dolor urna. Fusce vel metus eget sapien feugiat consectetur sed molestie diam. Maecenas nisl metus, tempus commodo ullamcorper eget, porttitor sed metus. Nulla a arcu eu augue porta tincidunt nec ut felis.</Note>
+            <Heading>
+              Qualifications
+            </Heading>
+            <Paragraph>
+              I have a Psychology Degree and Two Postgraduate Psychotherapy &amp; Counselling Qualifications (PG Certificate/PG Diploma). I am a Registered Member of the British Association for Counselling &amp; Psychotherapy (MBACP).
+            </Paragraph>
+            <Subheading>
+              Previous employment
+            </Subheading>
+            <Paragraph>
+              Before I became a therapist, I worked many weird and wonderful roles (most notably I once dressed as an iPhone and gave out flyers), though much of the time I spent studying I was also working in the Hospitality Industry, from barback to Restaurant Manager and everything in between. Alongside my private practice I also write and deliver Mental Health &amp; Wellbeing Workshops for “So Lets Talk”, a leading not-for-profit platform and work for a University.
+            </Paragraph>
+            <Subheading>
+              Areas of interest
+            </Subheading>
+            <Paragraph>
+              I have experience working with anxiety, depression, adverse childhood experiences, relationship difficulties, trauma, stress, loss, COVID-19, infidelity, self-esteem, health anxiety, post-prison sentence adjustment, emotional abuse, grief, familial pressures, promoting self-care, well-being, personal development, boosting confidence, and more.
+            </Paragraph>
           </TextWrapper>
         </Container>
       </ParallaxContainer>
