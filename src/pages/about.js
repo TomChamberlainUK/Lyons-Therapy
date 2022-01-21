@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Layout from 'components/layout/Layout';
 import ParallaxContainer from 'components/parallaxContainer/ParallaxContainer';
 import Container from 'components/container/Container';
-import { TextWrapper, Title, Subtitle, Heading, Subheading, Paragraph, Note, Seperator, List, ListItem } from 'components/typography/Typography';
+import { TextWrapper, Title, Subtitle, Heading, Subheading, Paragraph, Seperator } from 'components/typography/Typography';
 
 function AboutPage() {
 
