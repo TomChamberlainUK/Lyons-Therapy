@@ -56,20 +56,30 @@ function AboutPage() {
         images={
           [
             <StaticImage
-              src="https://picsum.photos/seed/a/1920/1080"
-              alt="PLACEHOLDER IMAGE"
+              src="../images/indoor_plant.jpeg"
+              alt="An indoor potted plant in front of a plain white wall"
               placeholder="blurred"
               loading="eager"
+              imgStyle={{
+                objectPosition: 'left',
+                transform: 'scaleX(-1)'
+              }}
             />,
             <StaticImage
-              src="https://picsum.photos/seed/b/1920/1080"
-              alt="PLACEHOLDER IMAGE"
+              src="../images/toby_lyons_02.jpeg"
+              alt="Toby Lyons wearing a sweater stood in front of a brick wall"
               placeholder="blurred"
+              imgStyle={{
+                objectPosition: 'right'
+              }}
             />,
             <StaticImage
-              src="https://picsum.photos/seed/c/1920/1080"
-              alt="PLACEHOLDER IMAGE"
+              src="../images/sunset_02.jpg"
+              alt="A field of wild grass with the sun setting in the background"
               placeholder="blurred"
+              imgStyle={{
+                objectPosition: '100% calc(50% + 100px)'
+              }}
             />
           ]
         }

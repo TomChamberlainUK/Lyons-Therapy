@@ -55,15 +55,18 @@ function ServicesPage() {
       <ParallaxContainer images={
         [
           <StaticImage
-            src="https://picsum.photos/seed/zz/1920/1080"
-            alt="PLACEHOLDER IMAGE"
+            src="../images/water_01.jpg"
+            alt="Choppy blue waves of the sea that fade into the horizon"
             placeholder="blurred"
             loading="eager"
           />,
           <StaticImage
-            src="https://picsum.photos/seed/x/1920/1080"
-            alt="PLACEHOLDER IMAGE"
+            src="../images/sunset_01.jpg"
+            alt="Rolling hills of grass fields and trees, painted golden by the sunset"
             placeholder="blurred"
+            imgStyle={{
+              objectPosition: 'left'
+            }}
           />
         ]
       }>
