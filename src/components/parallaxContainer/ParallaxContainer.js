@@ -37,7 +37,7 @@ export function ParallaxContainer({ children, images = [] }) {
 
     // Slowly scroll image on scrub/scroll
     const scrubImageAnimation = gsap.to(imageFrameInner, {
-      yPercent: -16.7, // with image height at 120% this allows the extra 20% to be scrolled
+      yPercent: -9, // with image height at 110% this allows the extra 10% to be scrolled
       scrollTrigger: {
         trigger: container,
         scrub: true,
