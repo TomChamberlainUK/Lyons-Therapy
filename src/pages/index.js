@@ -21,7 +21,7 @@ function IndexPage() {
 
     const triggers = ScrollTrigger.batch(scrollInElements, {
       interval: 0.1,
-      batchMax: 5,
+      batchMax: 10,
       onEnter: batch => gsap.to(batch, {
         opacity: 1,
         y: 0,

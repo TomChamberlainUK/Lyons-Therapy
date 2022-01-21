@@ -21,7 +21,7 @@ function ServicesPage() {
 
     const triggers = ScrollTrigger.batch(scrollInElements, {
       interval: 0.1,
-      batchMax: 5,
+      batchMax: 10,
       onEnter: batch => gsap.to(batch, {
         opacity: 1,
         y: 0,
@@ -77,28 +77,34 @@ function ServicesPage() {
             </Subtitle>
             <Seperator isBold={true} />
             <Heading className={'gsap-scroll-in'} >
-              Therapy: Short Term or Goal Orientated
+              Therapy
             </Heading>
+            <Subheading className={'gsap-scroll-in'} >
+              Short Term or Goal Orientated
+            </Subheading>
             <Paragraph className={'gsap-scroll-in'} >
               There are myriad reasons as to why you might prefer our sessions to be short term and there are many ways that we can work together to get you through a particular tough patch or help move you towards a specific agreed upon goal.
             </Paragraph>
-            <Heading className={'gsap-scroll-in'} >
-              Therapy: Long Term or Open Ended
-            </Heading>
+            <Subheading className={'gsap-scroll-in'} >
+              Long Term or Open Ended
+            </Subheading>
             <Paragraph className={'gsap-scroll-in'} >
               Therapy can really benefit from there being time for my clients and myself to become fully acquainted allowing us to use our therapeutic relationship as a vehicle for positive and long-term changes. A lot of the therapy provided by services within this country often focuses on quick symptom removal rather than addressing and exploring the core issues that may lie at the root of these symptoms. Open ended sessions give us the chance to do as much exploration or in-depth work that you feel is necessary. Though goals can still be a part of the sessions, sometimes real changes or breakthroughs can happen when we aren't fixed on one set target.
-            </Paragraph>
-            <Heading className={'gsap-scroll-in'} >
-              Employee Assistance Therapy
-            </Heading>
-            <Paragraph className={'gsap-scroll-in'} >
-              Join the 50% of UK businesses that engage with Employee Assistance Programmes. I offer block bookings to employers who recognise that sometimes their staff might need some one-to-one support from someone completely outside of the business. Get in touch to discuss reduced rate block bookings.
             </Paragraph>
             <Seperator />
             <ParallaxContainer.SectionLabel />
             <Heading className={'gsap-scroll-in'} >
-              Mental Health &amp; Wellbeing Sessions
+              Workplace
             </Heading>
+            <Subheading className={'gsap-scroll-in'} >
+              Employee Assistance Therapy
+            </Subheading>
+            <Paragraph className={'gsap-scroll-in'} >
+              Join the 50% of UK businesses that engage with Employee Assistance Programmes. I offer block bookings to employers who recognise that sometimes their staff might need some one-to-one support from someone completely outside of the business. Get in touch to discuss reduced rate block bookings.
+            </Paragraph>
+            <Subheading className={'gsap-scroll-in'} >
+              Mental Health &amp; Wellbeing Sessions
+            </Subheading>
             <Paragraph className={'gsap-scroll-in'} >
               I have experience writing, editing, and presenting Mental Health &amp; Wellbeing Presentations.
             </Paragraph>

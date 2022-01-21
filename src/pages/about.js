@@ -21,7 +21,7 @@ function AboutPage() {
 
     const triggers = ScrollTrigger.batch(scrollInElements, {
       interval: 0.1,
-      batchMax: 5,
+      batchMax: 10,
       onEnter: batch => gsap.to(batch, {
         opacity: 1,
         y: 0,
@@ -89,7 +89,7 @@ function AboutPage() {
             <Paragraph className={'gsap-scroll-in'} >
               There are many different reasons why you might be thinking about starting therapy. You might be feeling out of sorts, out of sync or not quite yourself. You might need support as you move through a difficult phase or transition in your life or you may recognise the need to explore and process some parts of your past.
             </Paragraph>
-            <Paragraph>
+            <Paragraph className={'gsap-scroll-in'} >
               From anxiety or depression to stress management and relationship difficulties therapy has the potential to help everyone differently.
             </Paragraph>
             <Subheading className={'gsap-scroll-in'} >
@@ -112,7 +112,7 @@ function AboutPage() {
             <Paragraph className={'gsap-scroll-in'} >
               I consider myself to be an active participant in a therapy session, meaning I am not just a silent “mhm”-er. To get the most out of our sessions I find it’s important to engage with your world and whatever has brought you to therapy at a pace with which you feel comfortable.
             </Paragraph>
-            <Paragraph>
+            <Paragraph className={'gsap-scroll-in'} >
               All my work is conducted discreetly and in the strictest confidence, the boundaries of this confidence and all the other details of how the sessions will work are discussed clearly and agreed upon prior to getting started.
             </Paragraph>
             <Subheading className={'gsap-scroll-in'} >
@@ -121,10 +121,10 @@ function AboutPage() {
             <Paragraph className={'gsap-scroll-in'} >
               I pride myself on my ability to create a safe and judgement-free space with each of my clients. Together we can build a therapeutic relationship built on warmth, genuine care, and trust. These foundations are essential for the discoveries and challenges that can be part of the therapeutic process as we move towards growth, empowerment, or healing.
             </Paragraph>
-            <Paragraph>
+            <Paragraph className={'gsap-scroll-in'} >
               I’m a therapist who cares deeply about his work. It’s very important to me that my clients get the most out of their therapeutic experience - that they feel truly heard and supported throughout our time together.
             </Paragraph>
-            <Subheading>
+            <Subheading className={'gsap-scroll-in'} >
               Counselling vs Psychotherapy?
             </Subheading>
             <Paragraph className={'gsap-scroll-in'} >
@@ -132,22 +132,22 @@ function AboutPage() {
             </Paragraph>
             <Seperator />
             <ParallaxContainer.SectionLabel />
-            <Heading>
+            <Heading className={'gsap-scroll-in'} >
               Qualifications
             </Heading>
-            <Paragraph>
+            <Paragraph className={'gsap-scroll-in'} >
               I have a Psychology Degree and Two Postgraduate Psychotherapy &amp; Counselling Qualifications (PG Certificate/PG Diploma). I am a Registered Member of the British Association for Counselling &amp; Psychotherapy (MBACP).
             </Paragraph>
-            <Subheading>
+            <Subheading className={'gsap-scroll-in'} >
               Previous employment
             </Subheading>
-            <Paragraph>
+            <Paragraph className={'gsap-scroll-in'} >
               Before I became a therapist, I worked many weird and wonderful roles (most notably I once dressed as an iPhone and gave out flyers), though much of the time I spent studying I was also working in the Hospitality Industry, from barback to Restaurant Manager and everything in between. Alongside my private practice I also write and deliver Mental Health &amp; Wellbeing Workshops for “So Lets Talk”, a leading not-for-profit platform and work for a University.
             </Paragraph>
-            <Subheading>
+            <Subheading className={'gsap-scroll-in'} >
               Areas of interest
             </Subheading>
-            <Paragraph>
+            <Paragraph className={'gsap-scroll-in'} >
               I have experience working with anxiety, depression, adverse childhood experiences, relationship difficulties, trauma, stress, loss, COVID-19, infidelity, self-esteem, health anxiety, post-prison sentence adjustment, emotional abuse, grief, familial pressures, promoting self-care, well-being, personal development, boosting confidence, and more.
             </Paragraph>
           </TextWrapper>

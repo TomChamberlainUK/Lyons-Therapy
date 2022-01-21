@@ -22,7 +22,7 @@ function ContactPage() {
 
     const triggers = ScrollTrigger.batch(scrollInElements, {
       interval: 0.1,
-      batchMax: 5,
+      batchMax: 10,
       onEnter: batch => gsap.to(batch, {
         opacity: 1,
         y: 0,
@@ -114,10 +114,10 @@ function ContactPage() {
               Pricing and contact information
             </Subtitle>
             <Seperator isBold={true} />
-            <Heading>
+            <Heading className={'gsap-scroll-in'} >
               How to get in touch
             </Heading>
-            <Paragraph>
+            <Paragraph className={'gsap-scroll-in'} >
               To book in a session or your free consultation, send over an email via the online form or directly to toby@lyonstherapy.co.uk. I aim to get back to enquiries within 48 hours.
             </Paragraph>
             <Subheading className={'gsap-scroll-in'} >
@@ -132,7 +132,7 @@ function ContactPage() {
               It’s important that we feel as though we can work well together and that you know what to expect in our sessions. Therefore I offer a free 20-minute Zoom session where we can meet each other, discuss some details and I can answer any questions you might have.
             </Paragraph>
             <Seperator />
-            <Note>
+            <Note className={'gsap-scroll-in'} >
               I offer a small number of concession rate slots for students and those with a low-household income, for further information please enquire.
             </Note>
           </TextWrapper>
