@@ -56,13 +56,12 @@ function AboutPage() {
         images={
           [
             <StaticImage
-              src="../images/indoor_plant.jpeg"
+              src="../images/indoor_plant.jpg"
               alt="An indoor potted plant in front of a plain white wall"
               placeholder="blurred"
               loading="eager"
               imgStyle={{
-                objectPosition: 'left',
-                transform: 'scaleX(-1)'
+                objectPosition: 'right',
               }}
             />,
             <StaticImage
