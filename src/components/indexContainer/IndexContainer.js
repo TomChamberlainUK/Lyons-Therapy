@@ -17,7 +17,7 @@ export function IndexContainer({ children }) {
         <div className={styles.imageFrame}>
           <div className={styles.imageWrapper}>
             <StaticImage
-              src="../../images/toby_lyons_01.jpeg"
+              src="../../images/toby_bush.jpg"
               alt="Toby Lyons in a shirt stood in front of a leafy bush"
               placeholder="blurred"
               className={styles.gatsbyImageWrapper}

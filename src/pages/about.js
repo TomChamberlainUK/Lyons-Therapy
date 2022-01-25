@@ -56,7 +56,7 @@ function AboutPage() {
         images={
           [
             <StaticImage
-              src="../images/indoor_plant.jpg"
+              src="../images/house_plant.jpg"
               alt="An indoor potted plant in front of a plain white wall"
               placeholder="blurred"
               loading="eager"
@@ -65,7 +65,7 @@ function AboutPage() {
               }}
             />,
             <StaticImage
-              src="../images/toby_lyons_02.jpeg"
+              src="../images/toby_wall.jpg"
               alt="Toby Lyons wearing a sweater stood in front of a brick wall"
               placeholder="blurred"
               imgStyle={{
@@ -73,7 +73,7 @@ function AboutPage() {
               }}
             />,
             <StaticImage
-              src="../images/sunset_02.jpg"
+              src="../images/wild_grass_sunset.jpg"
               alt="A field of wild grass with the sun setting in the background"
               placeholder="blurred"
               imgStyle={{

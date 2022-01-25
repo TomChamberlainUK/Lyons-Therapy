@@ -55,13 +55,13 @@ function ServicesPage() {
       <ParallaxContainer images={
         [
           <StaticImage
-            src="../images/water_01.jpg"
+            src="../images/water.jpg"
             alt="Choppy blue waves of the sea that fade into the horizon"
             placeholder="blurred"
             loading="eager"
           />,
           <StaticImage
-            src="../images/sunset_01.jpg"
+            src="../images/meadows_sunset.jpg"
             alt="Rolling hills of grass fields and trees, painted golden by the sunset"
             placeholder="blurred"
             imgStyle={{
