@@ -120,6 +120,39 @@ export default function TypographyTheme(theme) {
           {children}
         </li>
       );
-    })
+    }),
+
+    OrderedList: forwardRef(function List({ children, className }, ref) {
+      return (
+        <ol
+          ref={ref}
+          className={`${styles.orderedList} ${className && className}`}
+        >
+          {children}
+        </ol>
+      );
+    }),
+
+    OrderedListHeading: forwardRef(function ListItem({ children, className }, ref) {
+      return (
+        <li
+          ref={ref}
+          className={`${styles.orderedList__heading} ${className && className}`}
+        >
+          {children}
+        </li>
+      );
+    }),
+
+    OrderedListItem: forwardRef(function ListItem({ children, className }, ref) {
+      return (
+        <li
+          ref={ref}
+          className={`${styles.orderedList__item} ${className && className}`}
+        >
+          {children}
+        </li>
+      );
+    }),
   }
 }

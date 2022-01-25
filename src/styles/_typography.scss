@@ -78,6 +78,39 @@
   }
 }
 
+@mixin ordered-list {
+  counter-reset: section-counter;
+}
+
+@mixin ordered-list-heading($color: black) {
+  color: $color;
+  font: {
+    family: 'Helvetica Neue', 'montserrat', sans-serif;
+    size: 1.17rem;
+    weight: 700;
+  }
+  line-height: 175%;
+  letter-spacing: 0.03125rem;
+  counter-increment: section-counter;
+  counter-reset: sub-section-counter;
+
+  &::marker {
+    content: counter(section-counter) ".  ";
+    color: $color;
+  }
+}
+
+@mixin ordered-list-item($color: black, $marker-color: black) {
+  color: $color;
+  line-height: 175%;
+  counter-increment: sub-section-counter;
+
+  &::marker {
+    content: counter(section-counter) "." counter(sub-section-counter) "  ";
+    color: $marker-color;
+  }
+}
+
 @mixin seperator($color: black) {
   border: none;
   margin: {

@@ -36,6 +36,18 @@
   }
 }
 
+.ordered-list {
+  @include typography.ordered-list;
+
+  &__heading {
+    @include typography.ordered-list-heading(var(--text-light-high-emphasis));
+  }
+
+  &__item {
+    @include typography.ordered-list-item(var(--text-light-low-emphasis), var(--text-light-contrast));
+  }
+}
+
 .seperator {
   @include typography.seperator(var(--text-light-disabled));
 
