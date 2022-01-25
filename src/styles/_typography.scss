@@ -79,10 +79,13 @@
 }
 
 @mixin ordered-list {
+  padding-left: 0;
+  list-style-type: none;
   counter-reset: section-counter;
 }
 
 @mixin ordered-list-heading($color: black) {
+  display: flex;
   color: $color;
   font: {
     family: 'Helvetica Neue', 'montserrat', sans-serif;
@@ -94,20 +97,29 @@
   counter-increment: section-counter;
   counter-reset: sub-section-counter;
 
-  &::marker {
-    content: counter(section-counter) ".  ";
+  &::before {
+    content: counter(section-counter) ".";
+    display: block;
+    padding-right: 0.25rem;
+    min-width: 2.5rem;
     color: $color;
+    text-align: center;
   }
 }
 
 @mixin ordered-list-item($color: black, $marker-color: black) {
+  display: flex;
   color: $color;
   line-height: 175%;
   counter-increment: sub-section-counter;
 
-  &::marker {
-    content: counter(section-counter) "." counter(sub-section-counter) "  ";
+  &::before {
+    content: counter(section-counter) "." counter(sub-section-counter);
+    display: block;
+    padding-right: 0.25rem;
+    min-width: 2.5rem;
     color: $marker-color;
+    text-align: center;
   }
 }
 
