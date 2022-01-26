@@ -3,6 +3,7 @@ module.exports = {
     title: "Lyons Therapy",
   },
   plugins: [
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
