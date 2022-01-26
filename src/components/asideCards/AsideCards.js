@@ -18,55 +18,55 @@ const cardContents = [
   {
     color: 'primary',
     iconURL: iconURLs.heads,
-    // iconAlt: 'PLACEHOLDER',
+    iconAlt: 'An icon of two heads overlapping',
     text: 'We understand our existence as individuals within and through our relationships with others.'
   },
   {
     color: 'accent',
     iconURL: iconURLs.particles,
-    // iconAlt: 'PLACEHOLDER',
+    iconAlt: 'An icon of multiple circles in no discerible pattern',
     text: 'Everyone\'s life is unique. There are as many ways to suffer as there are to heal.'
   },
   {
     color: 'secondary',
     iconURL: iconURLs.star,
-    // iconAlt: 'PLACEHOLDER',
+    iconAlt: 'An icon of a star comprised of straight lines overlapping at a single point',
     text: 'How can we know how someone else experiences the world without hearing it from them first?'
   },
   {
     color: 'dark',
     iconURL: iconURLs.stairs,
-    // iconAlt: 'PLACEHOLDER',
+    iconAlt: 'An icon of an arched doorway with stairs that lead up',
     text: 'We all struggle at times with the ultimate concerns of life and death.'
   },
   {
     color: 'primary',
     iconURL: iconURLs.speech,
-    // iconAlt: 'PLACEHOLDER',
+    iconAlt: 'An icon of a speech bubble and circle overlapping nonconcentrically',
     text: 'Positive therapeutic relationships are built on a foundation of empathy and trust.'
   },
   {
     color: 'accent',
     iconURL: iconURLs.waves,
-    // iconAlt: 'PLACEHOLDER',
+    iconAlt: 'An icon of sharp rough waves with an arrow pointing towards calmer soft waves',
     text: 'It\'s important to normalise and accept distress in a world which often tries to diagnose and medicalise human suffering'
   },
   {
     color: 'secondary',
     iconURL: iconURLs.orbit,
-    // iconAlt: 'PLACEHOLDER',
+    iconAlt: 'An icon of four small circles orbiting a larger circle',
     text: 'Our mental health is intrinsically linked to our physical health, our relational world, our history and our beliefs.'
   },
   {
     color: 'dark',
     iconURL: iconURLs.growth,
-    // iconAlt: 'PLACEHOLDER',
+    iconAlt: 'An icon of a head with a plant growing from within',
     text: 'With obstacles removed, each of us have a propensity to move towards healing, change and growth.'
   },
   {
     color: 'primary',
     iconURL: iconURLs.sunset,
-    // iconAlt: 'PLACEHOLDER',
+    iconAlt: 'An icon of a sun setting behind a calm sea',
     text: 'By facing our struggles rather than trying to avoid or eliminate them, we can move forwards with our lives.'
   }
 ];
