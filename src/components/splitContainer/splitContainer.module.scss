@@ -31,5 +31,13 @@
     @media screen and (min-width: breakpoints.$desktop) and (orientation: landscape) {
       width: 38.2%;
     }
+
+    &--pinned {
+      @media screen and (min-width: breakpoints.$tablet) and (orientation: landscape) {
+        position: sticky;
+        top: var(--size-header-height);
+        height: calc(100vh - var(--size-header-height));
+      }
+    }
   }
 }
