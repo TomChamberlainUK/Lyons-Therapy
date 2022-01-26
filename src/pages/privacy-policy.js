@@ -2,7 +2,7 @@ import React from 'react';
 
 import Layout from 'components/layout/Layout';
 import Container from 'components/container/Container';
-import { TextWrapper, Title, Subtitle, Heading, Subheading, Paragraph, List, ListItem, OrderedList, OrderedListHeading, OrderedListItem, Note, Seperator } from 'components/typography/Typography';
+import { TextWrapper, Title, Subtitle, OrderedList, OrderedListHeading, OrderedListItem, Seperator } from 'components/typography/Typography';
 
 export default function PrivacyPolicyPage() {
   return (
