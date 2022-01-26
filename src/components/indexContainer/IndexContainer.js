@@ -32,6 +32,7 @@ export function IndexContainer({ children }) {
           />
         </div>
       }
+      pinSubContent={true}
     >
       <Container>
         <img
