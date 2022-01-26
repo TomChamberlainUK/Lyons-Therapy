@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 
 import Navigation from 'components/navigation/Navigation';
-import logoUrl from 'images/logo-horizontal.svg';
+import logoUrl from 'images/logo_horizontal.svg';
 import * as styles from './header.module.scss';
 
 function Header({ currentPage }) {
