@@ -64,51 +64,53 @@ function ContactPage() {
             backgroundColor="accent"
             fullHeight={true}
           >
-            <Form
-              onSubmit={
-                ({ name, subject, query }) => {
-                  const emailAddess = 'placeholder@email.com';
-                  const body = `${query}\n\n${name}`;
-                  const uri = encodeURI(`mailto:${emailAddess}?subject=${subject}&body=${body}`);
-                  window.open(uri);
+            <TextWrapper>
+              <Form
+                onSubmit={
+                  ({ name, subject, query }) => {
+                    const emailAddess = 'placeholder@email.com';
+                    const body = `${query}\n\n${name}`;
+                    const uri = encodeURI(`mailto:${emailAddess}?subject=${subject}&body=${body}`);
+                    window.open(uri);
+                  }
                 }
-              }
-            >
-              <Input
-                name="name"
-                label="Name"
-                labelPrefix="Your"
-                placeholder="Jane Smith"
-                note="How should we address you?"
-                type="text"
-                validators={['required', 'alphabetic']}
-              />
-              <Input
-                name="subject"
-                label="Subject"
-                labelPrefix="A"
-                placeholder="Something"
-                type="text"
-                note="What is the query relating to?"
-                validators={['required', 'alphabetic']}
-              />
-              <Input
-                name="query"
-                label="Message"
-                labelPrefix="A"
-                note="Enter your query"
-                isMultiline={true}
-                validators={['required', 'alphabetic']}
-              />
-              <Button
-                type="submit"
-                icon="markunread"
-                isPrimary={true}
               >
-                Send via Email
-              </Button>
-              <Note>Please note that this will open the default email provider on your device and format an email ready to  be sent.</Note>
-            </Form>
+                <Input
+                  name="name"
+                  label="Name"
+                  labelPrefix="Your"
+                  placeholder="Jane Smith"
+                  note="How should we address you?"
+                  type="text"
+                  validators={['required', 'alphabetic']}
+                />
+                <Input
+                  name="subject"
+                  label="Subject"
+                  labelPrefix="A"
+                  placeholder="Something"
+                  type="text"
+                  note="What is the query relating to?"
+                  validators={['required', 'alphabetic']}
+                />
+                <Input
+                  name="query"
+                  label="Message"
+                  labelPrefix="A"
+                  note="Enter your query"
+                  isMultiline={true}
+                  validators={['required', 'alphabetic']}
+                />
+                <Button
+                  type="submit"
+                  icon="markunread"
+                  isPrimary={true}
+                >
+                  Send via Email
+                </Button>
+                <Note>Please note that this will open the default email provider on your device and format an email ready to  be sent.</Note>
+              </Form>
+            </TextWrapper>
           </Container>
         }
         pinSubContent={true}
