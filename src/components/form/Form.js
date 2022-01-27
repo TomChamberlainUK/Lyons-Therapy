@@ -21,9 +21,6 @@ export function Form({ children, onSubmit }) {
     const formIsValid = validateForm();
     if (formIsValid) {
       onSubmit(values);
-    } else {
-      console.warn('Form has errors and cannot be sent!');
-      // ToDo - Are input warnings enough to show the user that submit failed?
     }
   }
 
@@ -47,10 +44,10 @@ export function Form({ children, onSubmit }) {
   function validateInput(inputName, inputValue) {
     let vErrors = [];
     if (validators[inputName].includes('required') && inputValue === '') {
-      vErrors.push('is required.');
+      vErrors.push('Please enter');
     }
     if (validators[inputName].includes('alphabetic') && /[^A-Za-z -']/.test(inputValue)) {
-      vErrors.push('only allows alphabetic characters, spaces, apostrophes and hyphens.');
+      vErrors.push('Please only use alphabetic characters, spaces, apostrophes and hyphens for');
     }
     // ToDo - add more validators
     return vErrors;
@@ -125,11 +122,10 @@ export function Input({ name, label, labelPrefix, value, note, type = "text", pl
             />
       }
       {
-        // ToDo - make error messages more friendly
         errors &&
         errors.map((error, i) => (
           <span key={i} className={styles.errorMessage}>
-            {`${labelPrefix} ${label} ${error}`}
+            {`${error} ${labelPrefix} ${label}`}
           </span>
         ))
       }

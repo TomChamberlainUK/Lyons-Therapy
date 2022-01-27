@@ -78,28 +78,28 @@ function ContactPage() {
                 <Input
                   name="name"
                   label="Name"
-                  labelPrefix="Your"
+                  labelPrefix="your"
                   placeholder="Jane Smith"
                   note="How should we address you?"
                   type="text"
-                  validators={['required', 'alphabetic']}
+                  validators={['required']}
                 />
                 <Input
                   name="subject"
                   label="Subject"
-                  labelPrefix="A"
-                  placeholder="Something"
+                  labelPrefix="a"
+                  placeholder="Introductory Session"
                   type="text"
                   note="What is the query relating to?"
-                  validators={['required', 'alphabetic']}
+                  validators={['required']}
                 />
                 <Input
                   name="query"
                   label="Message"
-                  labelPrefix="A"
+                  labelPrefix="a"
                   note="Enter your query"
                   isMultiline={true}
-                  validators={['required', 'alphabetic']}
+                  validators={['required']}
                 />
                 <Button
                   type="submit"
