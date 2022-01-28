@@ -68,7 +68,7 @@ function ContactPage() {
               <Form
                 onSubmit={
                   ({ name, subject, query }) => {
-                    const emailAddess = 'placeholder@email.com';
+                    const emailAddess = 'toby@lyonstherapy.co.uk';
                     const body = `${query}\n\n${name}`;
                     const uri = encodeURI(`mailto:${emailAddess}?subject=${subject}&body=${body}`);
                     window.open(uri);
