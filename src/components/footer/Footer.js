@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
 import logoURL from 'images/logo-circle-white.svg';
+import instagramIconSrc from 'images/instagram_icon.svg';
 
 import * as styles from './footer.module.scss';
 
@@ -24,6 +25,13 @@ function Footer() {
             <Link to="/contact" className={styles.footer__link}>Contact</Link>
             <Link to="/privacy-policy" className={styles.footer__link}>Privacy Policy</Link>
           </nav>
+          <a href="https://www.instagram.com/lyonstherapy/" target="_blank" rel="noreferrer">
+            <img
+              src={instagramIconSrc}
+              class={styles.socialMediaIcon}
+              alt="Instagram icon"
+            />
+          </a>
         </div>
         <div className={`${styles.footer__textWrapper} ${styles.accreditation}`}>
           <h1 className={styles.footer__heading}>Accreditation</h1>
