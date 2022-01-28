@@ -94,7 +94,7 @@ function AboutPage() {
               About
             </Title>
             <Subtitle className={'gsap-scroll-in'} >
-              An overview of what this therapy stuff is all about, and how I work.
+              An overview of what this therapy stuff is all about, and how I work
             </Subtitle>
             <Seperator isBold={true}/>
             <Heading className={'gsap-scroll-in'} >
