@@ -1,54 +1,44 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# Lyons Therapy
 
-## 🚀 Quick start
+Website for Lyons Therapy.
 
-1.  **Create a Gatsby site.**
+## Get started ##
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+### Requirements: ###
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+* Ensure Node.js version 14.15.0 or higher is installed.
+* Ensure npm is installed.
+* Download or clone this package.
 
-2.  **Start developing.**
+Then in CLI, navigate to the root directory and enter:
 
-    Navigate into your new site’s directory and start it up.
+```
+  npm i
+```
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+To install all packages.
 
-3.  **Open the code and start customizing!**
+> Please note that npm may show security vulnerabilities. These are caused by packages used by Gatsby. Gatsby have said that these are safe to ignore. Gatsby is a _static site building tool_ and so the vulnerabilities will not be apparent once the site is built. Please see this article for more info: [npm audit: Broken by Design](https://overreacted.io/npm-audit-broken-by-design/)
 
-    Your site is now running at http://localhost:8000!
+### Environment: ###
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+To deploy to the server, a .env file is required.
+This must contain the following:
+* **LIVE_DEPLOY** _Set to `true` to enable deployment to the server._
+* **FTP_HOST** _Set URL to the site's domain using ftp protocol._
+* **FTP_USER** _Set to authorised ftp account._
+* **FTP_PASSWORD** _Set to authorised ftp account's password._
 
-4.  **Learn more**
+### Commands: ###
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+```
+  npm run develop
+```
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+Create pages dynamically as they are edited. The site will be available on http://localhost:8000
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+```
+  npm run deploy
+```
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+Delete the current cache, build the site to `/public/`, then deploy to host supplied in .env
