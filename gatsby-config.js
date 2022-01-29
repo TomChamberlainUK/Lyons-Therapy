@@ -4,6 +4,12 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-plugin-htaccess",
+      options: {
+        https: true
+      }
+    },
+    {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: "Lyons Therapy",
