@@ -35,10 +35,18 @@ This must contain the following:
   npm run develop
 ```
 
-Create pages dynamically as they are edited. The site will be available on http://localhost:8000
+Create pages dynamically as they are edited and serve in development mode. The site will be available on http://localhost:8000 or your local IP with port 8000.
+
+```
+  npm run serve
+```
+
+Clears the current cache and builds the site in production mode to `/public/`, then serve. The site will be available on http://localhost:9000 or your local IP with port 9000.
 
 ```
   npm run deploy
 ```
 
-Delete the current cache, build the site to `/public/`, then deploy to host supplied in .env
+Clears the current cache and builds the site in production mode to `/public/`, then deploy to host supplied in .env
+
+> Please note that under the hood this repository uses Gatsby js and so all Gatsby CLI commands will also work.

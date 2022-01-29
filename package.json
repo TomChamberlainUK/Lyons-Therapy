@@ -9,10 +9,7 @@
   ],
   "scripts": {
     "develop": "gatsby develop -H 0.0.0.0",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve -H 0.0.0.0",
-    "clean": "gatsby clean",
+    "serve": "gatsby clean && gatsby build && gatsby serve -H 0.0.0.0",
     "deploy": "gatsby clean && gatsby build && node deploy"
   },
   "dependencies": {
