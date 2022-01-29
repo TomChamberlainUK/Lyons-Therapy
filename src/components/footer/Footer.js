@@ -35,7 +35,7 @@ function Footer() {
         </div>
         <div className={`${styles.footer__textWrapper} ${styles.accreditation}`}>
           <h1 className={styles.footer__heading}>Accreditation</h1>
-          <p className={styles.footer__paragraph}>Toby Lyons is a Registered Member of BACP and is a Registered Psychotherapist and Counsellor. Please see <Link to="#" className={styles.footer__link}>BACP</Link> for more details.</p>
+          <p className={styles.footer__paragraph}>Toby Lyons is a Registered Member of BACP and is a Registered Psychotherapist and Counsellor. Please see <Link to="https://www.bacp.co.uk/about-us/home/information-about-bacp/" className={styles.footer__link}>BACP</Link> for more details.</p>
         </div>
         <StaticImage
           src="../../images/bacp_badge.png"
