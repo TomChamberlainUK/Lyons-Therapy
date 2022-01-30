@@ -1,8 +1,39 @@
+const siteUrl = 'https://lyonstherapy.co.uk';
+
 module.exports = {
   siteMetadata: {
     title: "Lyons Therapy",
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        output: '/',
+        query: `
+        {
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }
+        `,
+        resolveSiteUrl: () => siteUrl,
+        resolvePages: ({
+          allSitePage: { nodes: allPages }
+        }) => {
+          return allPages;
+        },
+        serialize: ({ path }) => {
+          const entry = {
+            url: path,
+            changefreq: 'yearly',
+            priority: 0.5
+          }
+          return entry;
+        }
+      }
+    },
     {
       resolve: "gatsby-plugin-htaccess",
       options: {
