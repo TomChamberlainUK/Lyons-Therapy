@@ -50,3 +50,12 @@ Clears the current cache and builds the site in production mode to `/public/`, t
 Clears the current cache and builds the site in production mode to `/public/`, then deploy to host supplied in .env
 
 > Please note that under the hood this repository uses Gatsby js and so all Gatsby CLI commands will also work.
+
+## Credit ##
+
+This project was built using the following technologies:
+
+* [Gatsby](https://www.gatsbyjs.com/)
+* [React](https://reactjs.org/)
+* [SASS](https://sass-lang.com/)
+* [GSAP](https://greensock.com/gsap/)
