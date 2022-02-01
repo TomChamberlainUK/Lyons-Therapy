@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const siteUrl = process.env.SITE_URL;
+const siteUrl = process.env.SITE_URL || 'https://www.lyonstherapy.co.uk';
 
 module.exports = {
   siteMetadata: {
