@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import { Helmet } from 'react-helmet';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -8,6 +7,7 @@ import Layout from 'components/layout/Layout';
 import ParallaxContainer from 'components/parallaxContainer/ParallaxContainer';
 import { Container } from 'components/container/Container';
 import { TextWrapper, Title, Subtitle, Heading, Subheading, Paragraph, Seperator } from 'components/typography/Typography';
+import SEO from 'components/SEO/SEO';
 
 function ServicesPage() {
 
@@ -53,10 +53,10 @@ function ServicesPage() {
 
   return (
     <Layout pageTitle="Services">
-      <Helmet>
-        <meta name="description" content="I provide therapy services for individuals and workplaces in either short-term or long-term sessions tailored to your needs. Find something that suits you now." />
-        <title>Services | Lyons Therapy</title>
-      </Helmet>
+      <SEO
+        title="Services | Lyons Therapy"
+        description="I provide therapy services for individuals and workplaces in either short-term or long-term sessions tailored to your needs. Find something that suits you now."
+      />
       <ParallaxContainer images={
         [
           <StaticImage

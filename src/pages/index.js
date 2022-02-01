@@ -7,6 +7,7 @@ import Layout from 'components/layout/Layout';
 import IndexContainer from 'components/indexContainer/IndexContainer';
 import { TextWrapper, Title, Subtitle, Heading, Paragraph, Seperator } from 'components/typography/Typography';
 import { Button } from 'components/button/Button';
+import SEO from 'components/SEO/SEO';
 
 function IndexPage() {
 
@@ -52,6 +53,7 @@ function IndexPage() {
 
   return (
     <Layout pageTitle="Home">
+      <SEO title="Lyons Therapy" />
       <IndexContainer>
           <TextWrapper ref={textWrapperRef}>
             <Title className={'gsap-scroll-in'} >

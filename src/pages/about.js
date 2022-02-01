@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import { Helmet } from 'react-helmet';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -8,6 +7,7 @@ import Layout from 'components/layout/Layout';
 import ParallaxContainer from 'components/parallaxContainer/ParallaxContainer';
 import Container from 'components/container/Container';
 import { TextWrapper, Title, Subtitle, Heading, Subheading, Paragraph, Seperator } from 'components/typography/Typography';
+import SEO from 'components/SEO/SEO';
 
 function AboutPage() {
 
@@ -53,10 +53,10 @@ function AboutPage() {
 
   return (
     <Layout pageTitle="About">
-      <Helmet>
-        <meta name="description" content="I pride myself on my ability to create a safe and judgement-free space with clients. Together we can build a therapeutic relationship on warmth, care and trust." />
-        <title>About | Lyons Therapy</title>
-      </Helmet>
+      <SEO
+        title="About | Lyons Therapy"
+        description="I pride myself on my ability to create a safe and judgement-free space with clients. Together we can build a therapeutic relationship on warmth, care and trust."
+      />
       <ParallaxContainer
         images={
           [

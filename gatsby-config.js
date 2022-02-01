@@ -1,8 +1,13 @@
-const siteUrl = 'https://lyonstherapy.co.uk';
+require('dotenv').config();
+
+const siteUrl = process.env.SITE_URL;
 
 module.exports = {
   siteMetadata: {
     title: "Lyons Therapy",
+    description: "From anxiety or depression to stress management and relationship difficulties — Therapy has the potential to help everyone differently. Arrange a free consultation now.",
+    keywords: "lyons therapy, toby lyons, lyons, therapy, therapist, psychotherapy, psychotherapist, relational-integrative therapy, relational integrative therapy, counselling, counsellor, bcap, registered, qualified, mental health, wellbeing",
+    siteUrl: siteUrl
   },
   plugins: [
     {

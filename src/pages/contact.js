@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import { Helmet } from 'react-helmet';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -9,6 +8,7 @@ import Container from 'components/container/Container';
 import { TextWrapper, Title, Subtitle, Heading, Subheading, Paragraph, List, ListItem, Note, Seperator } from 'components/typography/Typography';
 import { Form, Input } from 'components/form/Form';
 import { Button } from 'components/button/Button';
+import SEO from 'components/SEO/SEO';
 
 function ContactPage() {
 
@@ -54,10 +54,10 @@ function ContactPage() {
   
   return (
     <Layout pageTitle="Contact">
-      <Helmet>
-        <meta name="description" content="I offer a free 20-minute session where we can meet each other, discuss some details, and answer any questions you might have. Arrange a free consultation now." />
-        <title>Contact | Lyons Therapy</title>
-      </Helmet>
+      <SEO
+        title="Contact | Lyons Therapy"
+        description="I offer a free 20-minute session where we can meet each other, discuss some details, and answer any questions you might have. Arrange a free consultation now."
+      />
       <SplitContainer
         subContent={
           <Container

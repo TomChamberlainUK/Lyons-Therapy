@@ -1,17 +1,22 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 
 import Layout from 'components/layout/Layout';
 import Container from 'components/container/Container';
 import { TextWrapper, Title, Subtitle, OrderedList, OrderedListHeading, OrderedListItem, Seperator } from 'components/typography/Typography';
+import SEO from 'components/SEO/SEO';
 
 export default function PrivacyPolicyPage() {
   return (
     <Layout>
-      <Helmet>
-        <meta name="robots" content="noindex" />
-        <title>Privacy Policy | Lyons Therapy</title>
-      </Helmet>
+      <SEO
+        title="Privacy Policy | Lyons Therapy"
+        meta={[
+          {
+            name: 'robots',
+            content: 'noindex'
+          }
+        ]}
+      />
       <Container>
           <TextWrapper>
             <Title>

@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import { Helmet } from 'react-helmet';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import "@fontsource/material-icons";
@@ -25,15 +24,6 @@ function Layout({ children, pageTitle }) {
 
   return (
     <div ref={rootRef} className={styles.root}>
-      <Helmet
-        htmlAttributes={{
-          lang: 'en'
-        }}
-      >
-        <meta charSet="utf-8" />
-        <meta name="description" content="From anxiety or depression to stress management and relationship difficulties — Therapy has the potential to help everyone differently. Arrange a free consultation now." />
-        <title>Lyons Therapy</title>
-      </Helmet>
       <Header currentPage={pageTitle}/>
       <main className={styles.main}>
         {children}
