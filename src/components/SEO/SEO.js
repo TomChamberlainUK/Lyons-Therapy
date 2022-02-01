@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import logo from 'images/lyons_therapy_logo_orange.svg';
+import logo from 'images/lyons_therapy_logo_orange.png';
 
 function SEO({ description, lang, meta, title, pathname }) {
 
