@@ -28,14 +28,14 @@ function Footer() {
           <a href="https://www.instagram.com/lyonstherapy/" target="_blank" rel="noreferrer">
             <img
               src={instagramIconSrc}
-              class={styles.socialMediaIcon}
+              className={styles.socialMediaIcon}
               alt="Instagram icon"
             />
           </a>
         </div>
         <div className={`${styles.footer__textWrapper} ${styles.accreditation}`}>
           <h1 className={styles.footer__heading}>Accreditation</h1>
-          <p className={styles.footer__paragraph}>Toby Lyons is a Registered Member of BACP and is a Registered Psychotherapist and Counsellor. Please see <Link to="https://www.bacp.co.uk/about-us/home/information-about-bacp/" className={styles.footer__link}>BACP</Link> for more details.</p>
+          <p className={styles.footer__paragraph}>Toby Lyons is a Registered Member of BACP and is a Registered Psychotherapist and Counsellor. Please see <a href="https://www.bacp.co.uk/about-us/home/information-about-bacp/" target="_blank" rel="noreferrer" className={styles.footer__link}>BACP</a> for more details.</p>
         </div>
         <StaticImage
           src="../../images/bacp_badge.png"
